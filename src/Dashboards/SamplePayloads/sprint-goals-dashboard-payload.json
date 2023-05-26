@@ -1,0 +1,1372 @@
+{
+  "id": "772f5dae-aea9-413f-a3f8-787bdfa94e78",
+  "name": "Sprint Goals",
+  "description": "Chapmans Peak Sprint Updates and Goals",
+  "groupId": "2ce48d21-05d3-44f9-a464-070558c0f273",
+  "ownerId": "2ce48d21-05d3-44f9-a464-070558c0f273",
+  "dashboardScope": 1,
+  "refreshInterval": 0,
+  "eTag": "692",
+  "lastAccessedDate": "2023-03-27T00:00:00.000Z",
+  "modifiedBy": "9adfe0de-95da-6431-b89a-26de89c96ae6",
+  "modifiedDate": "2023-03-27T10:45:48.863Z",
+  "widgets": [
+    {
+      "id": "a2beb190-d170-4d1e-b609-02f281fdb727",
+      "name": "Closed",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 18
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#00643a\",\"queryId\":\"d5392159-ee81-4f18-8a07-a15721aec474\",\"queryName\":\"N2CP-BWMSupport (Closed)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-BWMSupport (Closed)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "17"
+    },
+    {
+      "id": "78108c25-00aa-46af-a4d0-035555d77c46",
+      "name": "Closed",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 9
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#00643a\",\"queryId\":\"1c588636-053b-404b-bc52-7dfb62dfbeb9\",\"queryName\":\"N2CP-AxiomUSATemplate (Closed)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-AxiomUSATemplate (Closed)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "28"
+    },
+    {
+      "id": "3a1a2a5b-790c-45d8-9039-05228a6e8261",
+      "name": "Active",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 8
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#007acc\",\"queryId\":\"8b0e778f-b762-4d30-b163-bfcf31442994\",\"queryName\":\"N2CP-AxiomUSATemplate (Active)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-AxiomUSATemplate (Active)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "29"
+    },
+    {
+      "id": "9b3eab86-ab48-4c89-b13a-09bd5644123a",
+      "name": "Markdown",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 1,
+        "column": 10
+      },
+      "settings": "# Nevis MFA\nThis goal is to use Nevis as a third party solution to implement **multi factor authentication** in an assortment of Swift flows\n- [Repository](https://dev.azure.com/Derivco/PlayerExperience/_git/Platform-Swift-StateMachine-Api)",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget.Configuration",
+      "isNameConfigurable": false,
+      "isEnabled": true,
+      "eTag": "21"
+    },
+    {
+      "id": "e984e33a-2f8f-45e6-90c7-0c7b5ae7fbce",
+      "name": "Team Members",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 3,
+        "column": 10
+      },
+      "settings": "{\"chartType\":\"stackBarChart\",\"groupKey\":\"ccbacf3b-3020-4060-a21f-b22296f8881e\",\"scope\":\"WorkitemTracking.Queries\",\"title\":\"Team Members\",\"transformOptions\":{\"filter\":\"ccbacf3b-3020-4060-a21f-b22296f8881e\",\"groupBy\":\"System.State\",\"orderBy\":{\"propertyName\":\"label\",\"direction\":\"descending\"},\"measure\":{\"aggregation\":\"count\",\"propertyName\":\"\"},\"historyRange\":null,\"series\":\"System.AssignedTo\",\"groupByTags\":true,\"FilteredGroups\":[]},\"userColors\":[{\"value\":\"New\",\"backgroundColor\":\"#cccccc\"},{\"value\":\"Active\",\"backgroundColor\":\"#007acc\"},{\"value\":\"Closed\",\"backgroundColor\":\"#00643a\"},{\"value\":\"Removed\",\"backgroundColor\":\"#666666\"}],\"lastArtifactName\":\"N2CP-Nevis-MFA (Team) by Assigned To\"}",
+      "settingsVersion": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "31"
+    },
+    {
+      "id": "f8673963-131b-4941-aa48-14fb7d4ce597",
+      "name": "Team Members",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 3,
+        "column": 19
+      },
+      "settings": "{\"chartType\":\"stackBarChart\",\"groupKey\":\"36ebf92a-ec58-4454-8f06-6dfc6e8e125a\",\"scope\":\"WorkitemTracking.Queries\",\"title\":\"Team Members\",\"transformOptions\":{\"filter\":\"36ebf92a-ec58-4454-8f06-6dfc6e8e125a\",\"groupBy\":\"System.State\",\"orderBy\":{\"propertyName\":\"label\",\"direction\":\"descending\"},\"measure\":{\"aggregation\":\"count\",\"propertyName\":\"\"},\"historyRange\":null,\"series\":\"System.AssignedTo\",\"groupByTags\":true,\"FilteredGroups\":[]},\"userColors\":[{\"value\":\"New\",\"backgroundColor\":\"#cccccc\"}],\"lastArtifactName\":\"N2CP-Kafka-SessionInfo (Team) by Assigned To\"}",
+      "settingsVersion": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "26"
+    },
+    {
+      "id": "70d69fd8-ea80-44f4-977e-1677b94ba3df",
+      "name": "Markdown",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 1,
+        "column": 13
+      },
+      "settings": "# KYC Waiting Time\nThis goal is to assist players by implementing a **mailer notification** to inform the risk agent of a failure.\n- [Repository](https://dev.azure.com/Derivco/Software/_git/Platform-Markets-Foghorn-Service)",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget.Configuration",
+      "isNameConfigurable": false,
+      "isEnabled": true,
+      "eTag": "17"
+    },
+    {
+      "id": "7a1386a4-46d5-45e3-bda3-1c23d07aa697",
+      "name": "Work Items",
+      "size": {
+        "rowSpan": 3,
+        "columnSpan": 4
+      },
+      "position": {
+        "row": 8,
+        "column": 10
+      },
+      "settings": "{\"query\":{\"queryId\":\"ae388007-c7a5-4e5c-a53a-f3d119798e12\",\"queryName\":\"N2CP-Impediments\"},\"selectedColumns\":[{\"name\":\"Title\",\"referenceName\":\"System.Title\"},{\"name\":\"Assigned To\",\"referenceName\":\"System.AssignedTo\"},{\"name\":\"State\",\"referenceName\":\"System.State\"}],\"lastArtifactName\":\"N2CP-Impediments\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget",
+      "configurationContributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "65"
+    },
+    {
+      "id": "635550a5-2722-4b95-88b9-30972a09a5a8",
+      "name": "Chart for Work Items",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 2
+      },
+      "position": {
+        "row": 11,
+        "column": 5
+      },
+      "settings": null,
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "1"
+    },
+    {
+      "id": "af81078a-7e7f-4b1c-b6ef-3245c10b77ee",
+      "name": "Work Items",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 5,
+        "column": 4
+      },
+      "settings": "{\"query\":{\"queryId\":\"3d190fdd-2fa8-4c34-897e-6d6efc34c35b\",\"queryName\":\"N2CP-SwiftAccountClosure\"},\"selectedColumns\":[{\"name\":\"Title\",\"referenceName\":\"System.Title\"},{\"name\":\"Assigned To\",\"referenceName\":\"System.AssignedTo\"},{\"name\":\"State\",\"referenceName\":\"System.State\"}],\"lastArtifactName\":\"N2CP-SwiftAccountClosure\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget",
+      "configurationContributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "17"
+    },
+    {
+      "id": "9e81cd4b-d207-4117-b990-3b451deafc77",
+      "name": "New",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 1
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#cccccc\",\"queryId\":\"cf194851-009c-4bb0-860a-726495c7c5d3\",\"queryName\":\"N2CP-SwiftRegUpdates (New)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-SwiftRegUpdates (New)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "12"
+    },
+    {
+      "id": "34a668c2-370f-400b-bffd-3ca2a597a00a",
+      "name": "Markdown",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 1,
+        "column": 4
+      },
+      "settings": "# Swift Account Closure\nThis goal is to add new **Account Closure variants** for AZ & VA.\n- [Repository](https://dev.azure.com/Derivco/Software/_git/Platform-Swift-Responsible-Gaming-Store)",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget.Configuration",
+      "isNameConfigurable": false,
+      "isEnabled": true,
+      "eTag": "15"
+    },
+    {
+      "id": "30abaa26-c8f7-4b15-b96e-3ccb8cc3a6fe",
+      "name": "Work Items",
+      "size": {
+        "rowSpan": 3,
+        "columnSpan": 4
+      },
+      "position": {
+        "row": 8,
+        "column": 1
+      },
+      "settings": "{\"query\":{\"queryId\":\"447f7b12-7889-49c3-a5cf-0c246cbab817\",\"queryName\":\"N2CP-Reboot\"},\"selectedColumns\":[{\"name\":\"Title\",\"referenceName\":\"System.Title\"},{\"name\":\"Assigned To\",\"referenceName\":\"System.AssignedTo\"},{\"name\":\"State\",\"referenceName\":\"System.State\"}],\"lastArtifactName\":\"N2CP-Reboot\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget",
+      "configurationContributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "63"
+    },
+    {
+      "id": "185e9ae6-abb7-4178-a690-3d0097b3b056",
+      "name": "Work Items",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 5,
+        "column": 1
+      },
+      "settings": "{\"query\":{\"queryId\":\"8a205527-fd0b-41b1-bb7e-64a1a3c5f109\",\"queryName\":\"N2CP-SwiftRegUpdates\"},\"selectedColumns\":[{\"name\":\"Title\",\"referenceName\":\"System.Title\"},{\"name\":\"Assigned To\",\"referenceName\":\"System.AssignedTo\"},{\"name\":\"State\",\"referenceName\":\"System.State\"}],\"lastArtifactName\":\"N2CP-SwiftRegUpdates\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget",
+      "configurationContributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "17"
+    },
+    {
+      "id": "6fd34ac1-d2ef-4089-89b7-46a7b0fe0d56",
+      "name": "Markdown",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 1,
+        "column": 1
+      },
+      "settings": "# Swift Registration Page Updates yo\nThis goal is to **update UI** components and their associated tests on the Swift Registration pages for AZ & VA variants\n- [Repository](https://dev.azure.com/Derivco/PlayerExperience/_git/Platform-Swift-StateMachine-Api)",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget.Configuration",
+      "isNameConfigurable": false,
+      "isEnabled": true,
+      "eTag": "15"
+    },
+    {
+      "id": "e8c43dee-c8e0-427a-88e7-47d4f78ce6b0",
+      "name": "Closed",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 15
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#00643a\",\"queryId\":\"9ac5096d-f032-4134-8065-e5879b6619cc\",\"queryName\":\"N2CP-KYCWaitingTime (Closed)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-KYCWaitingTime (Closed)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "16"
+    },
+    {
+      "id": "64c4cbb1-a7b6-44dc-807f-55a49a15487e",
+      "name": "Closed",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 21
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#00643a\",\"queryId\":\"40355a27-6e13-49db-a40a-e5a99f27d4d3\",\"queryName\":\"N2CP-Kafka-SessionInfo (Closed)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Kafka-SessionInfo (Closed)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "19"
+    },
+    {
+      "id": "cc0b682b-73d0-404c-8269-5675c8200e64",
+      "name": "New",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 4
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#cccccc\",\"queryId\":\"c48bacb7-d821-434b-9896-37bb70f63459\",\"queryName\":\"N2CP-SwiftAccountClosure (New)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-SwiftAccountClosure (New)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "13"
+    },
+    {
+      "id": "7fbb28c7-86c7-4c5d-b6e9-5a1cac282788",
+      "name": "Closed",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 24
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#00643a\",\"queryId\":\"9a025a2a-eb62-48e9-bf05-996a1e8bd239\",\"queryName\":\"N2CP-Misc (Closed)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Misc (Closed)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "21"
+    },
+    {
+      "id": "a41022f2-37f1-4a64-8d00-5f3b27f87d2e",
+      "name": "Markdown",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 1,
+        "column": 19
+      },
+      "settings": "# PTSNet - Kafka Session Info\nThis goal is to create a new Kafka **data stream** containing data from PTS tables tb_Session and tb_Sessioninfo",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget.Configuration",
+      "isNameConfigurable": false,
+      "isEnabled": true,
+      "eTag": "24"
+    },
+    {
+      "id": "78a98a56-ee4c-454e-9858-5f4f3988b094",
+      "name": "Closed",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 6
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#00643a\",\"queryId\":\"9f7057df-1ff4-48d5-968c-78775dd45229\",\"queryName\":\"N2CP-SwiftAccountClosure (Closed)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-SwiftAccountClosure (Closed)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "12"
+    },
+    {
+      "id": "94f3aed0-8aad-4465-8e90-616541e63e75",
+      "name": "Active",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 5
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#007acc\",\"queryId\":\"80c92a3a-eced-4e05-88f8-556ab7d585c6\",\"queryName\":\"N2CP-SwiftAccountClosure (Active)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-SwiftAccountClosure (Active)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "13"
+    },
+    {
+      "id": "c699102e-ab04-4115-9262-653c9603d268",
+      "name": "Work Items",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 5,
+        "column": 22
+      },
+      "settings": "{\"query\":{\"queryId\":\"40e1eeab-f944-4046-a237-4625bb3aae7d\",\"queryName\":\"N2CP-Misc\"},\"selectedColumns\":[{\"name\":\"Title\",\"referenceName\":\"System.Title\"},{\"name\":\"Assigned To\",\"referenceName\":\"System.AssignedTo\"},{\"name\":\"State\",\"referenceName\":\"System.State\"}],\"lastArtifactName\":\"N2CP-Misc\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget",
+      "configurationContributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "37"
+    },
+    {
+      "id": "92969c9a-a9a7-4bac-bbdf-6c8451b1a591",
+      "name": "Markdown",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 4
+      },
+      "position": {
+        "row": 7,
+        "column": 10
+      },
+      "settings": "# Impediments",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget.Configuration",
+      "isNameConfigurable": false,
+      "isEnabled": true,
+      "eTag": "22"
+    },
+    {
+      "id": "bf902999-8f57-43cf-afce-6eb0580bd213",
+      "name": "New",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 13
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#cccccc\",\"queryId\":\"db76b82e-3446-4ba6-b485-642bef1de53e\",\"queryName\":\"N2CP-KYCWaitingTime (New)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-KYCWaitingTime (New)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "16"
+    },
+    {
+      "id": "4263f5c1-e014-497a-9ddd-946bea305850",
+      "name": "Work Items",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 5,
+        "column": 16
+      },
+      "settings": "{\"query\":{\"queryId\":\"de9a425a-d79e-41b3-b305-2f6a057fab39\",\"queryName\":\"N2CP-BWMSupport\"},\"selectedColumns\":[{\"name\":\"Title\",\"referenceName\":\"System.Title\"},{\"name\":\"Assigned To\",\"referenceName\":\"System.AssignedTo\"},{\"name\":\"State\",\"referenceName\":\"System.State\"}],\"lastArtifactName\":\"N2CP-BWMSupport\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget",
+      "configurationContributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "25"
+    },
+    {
+      "id": "4909ea5c-3cc7-422e-ac8a-9471f3af8b15",
+      "name": "Markdown",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 1,
+        "column": 16
+      },
+      "settings": "# BWM Support\nThis goal is to provide assistance and support to the BWM project.\n- [Repository](https://dev.azure.com/Derivco/Software/_git/Platform-Markets-Foghorn-Service)",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget.Configuration",
+      "isNameConfigurable": false,
+      "isEnabled": true,
+      "eTag": "20"
+    },
+    {
+      "id": "c3db818a-03c7-408a-9170-971cd261242c",
+      "name": "New",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 19
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#cccccc\",\"queryId\":\"84afbb1c-c152-4c55-85a7-fd622920ef4e\",\"queryName\":\"N2CP-Kafka-SessionInfo (New)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Kafka-SessionInfo (New)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "20"
+    },
+    {
+      "id": "d60013d8-51b1-4e9d-8954-988919ae1bc3",
+      "name": "New",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 7
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#cccccc\",\"queryId\":\"98e0d3ef-f93a-4836-bc1a-8cf5392ac3f1\",\"queryName\":\"N2CP-AxiomUSATemplate (New)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-AxiomUSATemplate (New)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "29"
+    },
+    {
+      "id": "d339affd-c429-48c5-98ee-9c184396f4c7",
+      "name": "Team Members",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 3,
+        "column": 4
+      },
+      "settings": "{\"chartType\":\"stackBarChart\",\"groupKey\":\"4db8a304-bdf7-4c4f-9bc1-f18a7df1a1b3\",\"scope\":\"WorkitemTracking.Queries\",\"title\":\"Team Members\",\"transformOptions\":{\"filter\":\"4db8a304-bdf7-4c4f-9bc1-f18a7df1a1b3\",\"groupBy\":\"System.State\",\"orderBy\":{\"propertyName\":\"label\",\"direction\":\"descending\"},\"measure\":{\"aggregation\":\"count\",\"propertyName\":\"\"},\"historyRange\":null,\"series\":\"System.AssignedTo\",\"groupByTags\":true,\"FilteredGroups\":[]},\"userColors\":[{\"value\":\"New\",\"backgroundColor\":\"#cccccc\"},{\"value\":\"Active\",\"backgroundColor\":\"#009ccc\"}],\"lastArtifactName\":\"N2CP-SwiftAccountClosure (Team) by Assigned To\"}",
+      "settingsVersion": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "18"
+    },
+    {
+      "id": "6cc7f3db-ddc6-43a4-982a-9e63a33675ba",
+      "name": "Active",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 2
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#007acc\",\"queryId\":\"01d58494-e36e-4ad3-9c11-c98aeb243cfe\",\"queryName\":\"N2CP-SwiftRegUpdates (Active)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-SwiftRegUpdates (Active)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "12"
+    },
+    {
+      "id": "91386380-461b-4f31-aa19-9f042246f498",
+      "name": "Team Members",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 3,
+        "column": 13
+      },
+      "settings": "{\"chartType\":\"stackBarChart\",\"groupKey\":\"a5247112-d3bf-479d-bac4-c4125be185ed\",\"scope\":\"WorkitemTracking.Queries\",\"title\":\"Team Members\",\"transformOptions\":{\"filter\":\"a5247112-d3bf-479d-bac4-c4125be185ed\",\"groupBy\":\"System.State\",\"orderBy\":{\"propertyName\":\"label\",\"direction\":\"descending\"},\"measure\":{\"aggregation\":\"count\",\"propertyName\":\"\"},\"historyRange\":null,\"series\":\"System.AssignedTo\",\"groupByTags\":false},\"userColors\":[{\"value\":\"New\",\"backgroundColor\":\"#cccccc\"},{\"value\":\"Closed\",\"backgroundColor\":\"#00643a\"},{\"value\":\"Back Burner\",\"backgroundColor\":\"#f58b1f\"},{\"value\":\"Active\",\"backgroundColor\":\"#007acc\"}],\"lastArtifactName\":\"N2CP-KYCWaitingTime (Team) by Assigned To\"}",
+      "settingsVersion": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "25"
+    },
+    {
+      "id": "6dac692a-ea68-4b63-92d5-a2dfaa7e7a5a",
+      "name": "Work Items",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 5,
+        "column": 13
+      },
+      "settings": "{\"query\":{\"queryId\":\"a80d7c20-e5d4-4055-a59d-313773b8ffe0\",\"queryName\":\"N2CP-KYCWaitingTime\"},\"selectedColumns\":[{\"name\":\"Title\",\"referenceName\":\"System.Title\"},{\"name\":\"Assigned To\",\"referenceName\":\"System.AssignedTo\"},{\"name\":\"State\",\"referenceName\":\"System.State\"}],\"lastArtifactName\":\"N2CP-KYCWaitingTime\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget",
+      "configurationContributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "24"
+    },
+    {
+      "id": "5d07597c-8828-4619-b7ac-aad2841c30f3",
+      "name": "Markdown",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 1,
+        "column": 7
+      },
+      "settings": "# USA Axiom Template\nThis goal is to understand, use and configure the USA Market Delivery Template on an Axiom Environment\n- [Repository](https://dev.azure.com/Derivco/Software/_git/Internal-Axiom-Build-USAMarketDelivery)",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget.Configuration",
+      "isNameConfigurable": false,
+      "isEnabled": true,
+      "eTag": "25"
+    },
+    {
+      "id": "4ac8d897-486c-49b7-aa09-ad52b9703f0a",
+      "name": "Active",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 20
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#007acc\",\"queryId\":\"101da54d-c0d5-4cc3-861a-0b1918d1d3f3\",\"queryName\":\"N2CP-Kafka-SessionInfo (Active)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Kafka-SessionInfo (Active)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "20"
+    },
+    {
+      "id": "b6e6c2ca-5103-44db-aa70-ae1ad5f1b152",
+      "name": "Team Members",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 3,
+        "column": 7
+      },
+      "settings": "{\"chartType\":\"stackBarChart\",\"groupKey\":\"ac8afd41-bf7b-4eca-81e6-ad86408d30ed\",\"scope\":\"WorkitemTracking.Queries\",\"title\":\"Team Members\",\"transformOptions\":{\"filter\":\"ac8afd41-bf7b-4eca-81e6-ad86408d30ed\",\"groupBy\":\"System.State\",\"orderBy\":{\"propertyName\":\"label\",\"direction\":\"descending\"},\"measure\":{\"aggregation\":\"count\",\"propertyName\":\"\"},\"historyRange\":null,\"series\":\"System.AssignedTo\",\"groupByTags\":true,\"FilteredGroups\":[]},\"userColors\":[{\"value\":\"New\",\"backgroundColor\":\"#cccccc\"},{\"value\":\"Closed\",\"backgroundColor\":\"#00643a\"},{\"value\":\"Active\",\"backgroundColor\":\"#007acc\"}],\"lastArtifactName\":\"N2CP-AxiomUSATemplate (Team) by Assigned To\"}",
+      "settingsVersion": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "49"
+    },
+    {
+      "id": "3f08899f-4a37-498b-a48b-af95ef58253d",
+      "name": "Chart for Work Items",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 2
+      },
+      "position": {
+        "row": 11,
+        "column": 3
+      },
+      "settings": null,
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "1"
+    },
+    {
+      "id": "0dac2144-2ccf-4115-ac1a-b09a0542a74c",
+      "name": "New",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 10
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#cccccc\",\"queryId\":\"5a8ad939-77d2-42be-8254-a7f50dca6c83\",\"queryName\":\"N2CP-Nevis-MFA (New)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Nevis-MFA (New)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "22"
+    },
+    {
+      "id": "c3a5d1c9-97ea-4f5c-a8c1-b529c2527d17",
+      "name": "Active",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 9,
+        "column": 5
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#007acc\",\"queryId\":\"b1fbe604-9726-4ce4-8877-b777be615f59\",\"queryName\":\"N2CP-Reboot (Active)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Reboot (Active)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "46"
+    },
+    {
+      "id": "f76e4eb4-6f14-4ba8-b779-b63d6df3aadb",
+      "name": "Team Members",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 3,
+        "column": 1
+      },
+      "settings": "{\"chartType\":\"stackBarChart\",\"groupKey\":\"7f5a9f0d-06e2-47fa-9d25-f7a8ed26785a\",\"scope\":\"WorkitemTracking.Queries\",\"title\":\"Team Members\",\"transformOptions\":{\"filter\":\"7f5a9f0d-06e2-47fa-9d25-f7a8ed26785a\",\"groupBy\":\"System.State\",\"orderBy\":{\"propertyName\":\"label\",\"direction\":\"descending\"},\"measure\":{\"aggregation\":\"count\",\"propertyName\":\"\"},\"historyRange\":null,\"series\":\"System.AssignedTo\",\"groupByTags\":true,\"FilteredGroups\":[]},\"userColors\":[{\"value\":\"New\",\"backgroundColor\":\"#cccccc\"},{\"value\":\"Closed\",\"backgroundColor\":\"#00643a\"},{\"value\":\"Active\",\"backgroundColor\":\"#009ccc\"}],\"lastArtifactName\":\"N2CP-SwiftRegUpdates (Team) by Assigned To\"}",
+      "settingsVersion": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "16"
+    },
+    {
+      "id": "fa1bb225-3743-4192-9365-b671756b529a",
+      "name": "Markdown",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 9
+      },
+      "position": {
+        "row": 7,
+        "column": 1
+      },
+      "settings": "# Reboot\nThis goal is to spend **30%** of our time towards process improvement, fixing technical debt and approved learning.",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget.Configuration",
+      "isNameConfigurable": false,
+      "isEnabled": true,
+      "eTag": "41"
+    },
+    {
+      "id": "df0ff835-15ce-4d1c-b60b-ba8cf415115e",
+      "name": "Closed",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 3
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#00643a\",\"queryId\":\"60620c7f-8fb1-47dc-a666-4c40dd5cd922\",\"queryName\":\"N2CP-SwiftRegUpdates (Closed)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-SwiftRegUpdates (Closed)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "11"
+    },
+    {
+      "id": "e027dc7e-875a-4456-8e9f-bbc47f3a33a7",
+      "name": "Active",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 14
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#007acc\",\"queryId\":\"9eb3f7cf-b4f0-444a-9efc-8c4dbcb7fc4b\",\"queryName\":\"N2CP-KYCWaitingTime (Active)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-KYCWaitingTime (Active)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "17"
+    },
+    {
+      "id": "d7949371-fda3-4ea4-9fac-c5a77aafd1b0",
+      "name": "New",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 16
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#cccccc\",\"queryId\":\"5c451a9e-8834-4b80-ad09-7b529c8f1389\",\"queryName\":\"N2CP-BWMSupport (New)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-BWMSupport (New)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "18"
+    },
+    {
+      "id": "d9fff483-4a94-482f-ae7a-d6039f1df30c",
+      "name": "Work Items",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 5,
+        "column": 19
+      },
+      "settings": "{\"query\":{\"queryId\":\"c0c309a1-0b66-4aa0-954e-71fd4bc602cc\",\"queryName\":\"N2CP-PTSNet\"},\"selectedColumns\":[{\"name\":\"Title\",\"referenceName\":\"System.Title\"},{\"name\":\"Assigned To\",\"referenceName\":\"System.AssignedTo\"},{\"name\":\"State\",\"referenceName\":\"System.State\"}],\"lastArtifactName\":\"N2CP-PTSNet\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget",
+      "configurationContributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "29"
+    },
+    {
+      "id": "faa71f4f-c245-4e6a-bce3-d8d485d98a89",
+      "name": "Active",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 17
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#007acc\",\"queryId\":\"f682f179-4ba5-4538-b55c-09baf532570b\",\"queryName\":\"N2CP-BWMSupport (Active)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-BWMSupport (Active)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "18"
+    },
+    {
+      "id": "3a6ecec0-9892-4e22-a26c-daad3d30baac",
+      "name": "Work Items",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 5,
+        "column": 7
+      },
+      "settings": "{\"query\":{\"queryId\":\"bebc9a85-8999-4a8e-a25a-f643837e0e19\",\"queryName\":\"N2CP-AxiomUSATemplate\"},\"selectedColumns\":[{\"name\":\"Title\",\"referenceName\":\"System.Title\"},{\"name\":\"Assigned To\",\"referenceName\":\"System.AssignedTo\"},{\"name\":\"State\",\"referenceName\":\"System.State\"}],\"lastArtifactName\":\"N2CP-AxiomUSATemplate\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget",
+      "configurationContributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "52"
+    },
+    {
+      "id": "e9af7893-0192-4e2e-92bf-db2bebc01f5b",
+      "name": "New",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 8,
+        "column": 5
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#cccccc\",\"queryId\":\"62022cfc-ad63-4914-a825-bdfde5190e67\",\"queryName\":\"N2CP-Reboot (New)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Reboot (New)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "48"
+    },
+    {
+      "id": "ac73c109-61f4-4e98-9e1d-dc5d6dcce913",
+      "name": "New",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 22
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#cccccc\",\"queryId\":\"bb85b243-cc03-41f1-b80c-f46f2f214d6e\",\"queryName\":\"N2CP-Misc (New)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Misc (New)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "24"
+    },
+    {
+      "id": "d823a6e6-fd1e-4667-ae28-de96544cd8f7",
+      "name": "Team Members",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 3,
+        "column": 16
+      },
+      "settings": "{\"chartType\":\"stackBarChart\",\"groupKey\":\"9a8badbb-2436-4b93-ba97-573f9409c79c\",\"scope\":\"WorkitemTracking.Queries\",\"title\":\"Team Members\",\"transformOptions\":{\"filter\":\"9a8badbb-2436-4b93-ba97-573f9409c79c\",\"groupBy\":\"System.State\",\"orderBy\":{\"propertyName\":\"label\",\"direction\":\"descending\"},\"measure\":{\"aggregation\":\"count\",\"propertyName\":\"\"},\"historyRange\":null,\"series\":\"System.AssignedTo\",\"groupByTags\":true,\"FilteredGroups\":[]},\"userColors\":[{\"value\":\"Closed\",\"backgroundColor\":\"#00643a\"},{\"value\":\"Active\",\"backgroundColor\":\"#007acc\"},{\"value\":\"New\",\"backgroundColor\":\"#cccccc\"}],\"lastArtifactName\":\"N2CP-BWMSupport (Team) by Assigned To\"}",
+      "settingsVersion": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "24"
+    },
+    {
+      "id": "6c3fc0f4-7441-4ae4-a880-e2a5926f9f2f",
+      "name": "Chart for Work Items",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 2
+      },
+      "position": {
+        "row": 11,
+        "column": 1
+      },
+      "settings": null,
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "1"
+    },
+    {
+      "id": "40aa1859-de04-410a-9915-e596162c4af9",
+      "name": "Work Items",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 5,
+        "column": 10
+      },
+      "settings": "{\"query\":{\"queryId\":\"8d3c6f29-b881-4044-b7f6-be76f470c3ee\",\"queryName\":\"N2CP-Nevis-MFA\"},\"selectedColumns\":[{\"name\":\"Title\",\"referenceName\":\"System.Title\"},{\"name\":\"Assigned To\",\"referenceName\":\"System.AssignedTo\"},{\"name\":\"State\",\"referenceName\":\"System.State\"}],\"lastArtifactName\":\"N2CP-Nevis-MFA\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget",
+      "configurationContributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "28"
+    },
+    {
+      "id": "d84f762d-2984-4ebc-bb31-e741cd59c00a",
+      "name": "Closed",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 12
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#00643a\",\"queryId\":\"6b4caa99-0090-47da-badd-30d07ebff923\",\"queryName\":\"N2CP-Nevis-MFA (Closed)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Nevis-MFA (Closed)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "21"
+    },
+    {
+      "id": "0d666e20-971e-46b2-afdb-e90fac753600",
+      "name": "Team Members",
+      "size": {
+        "rowSpan": 3,
+        "columnSpan": 4
+      },
+      "position": {
+        "row": 8,
+        "column": 6
+      },
+      "settings": "{\"chartType\":\"stackBarChart\",\"groupKey\":\"a51a3186-aa0b-4485-83d1-2b8e042307c8\",\"scope\":\"WorkitemTracking.Queries\",\"title\":\"Team Members\",\"transformOptions\":{\"filter\":\"a51a3186-aa0b-4485-83d1-2b8e042307c8\",\"groupBy\":\"System.State\",\"orderBy\":{\"propertyName\":\"label\",\"direction\":\"descending\"},\"measure\":{\"aggregation\":\"count\",\"propertyName\":\"\"},\"historyRange\":null,\"series\":\"System.AssignedTo\",\"groupByTags\":true,\"FilteredGroups\":[]},\"userColors\":[{\"value\":\"New\",\"backgroundColor\":\"#cccccc\"},{\"value\":\"Closed\",\"backgroundColor\":\"#00643a\"},{\"value\":\"Active\",\"backgroundColor\":\"#009ccc\"}],\"lastArtifactName\":\"N2CP-Reboot (Team) by Assigned To\"}",
+      "settingsVersion": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "58"
+    },
+    {
+      "id": "90ec96c1-d562-4b19-aa29-e97e54bf4ec3",
+      "name": "Active",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 11
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#007acc\",\"queryId\":\"ea3a9cd7-52fa-4e70-bdd9-88733aebe2d7\",\"queryName\":\"N2CP-Nevis-MFA (Active)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Nevis-MFA (Active)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "22"
+    },
+    {
+      "id": "abc9b923-2faf-4fd9-9441-eacf734a1c89",
+      "name": "Markdown",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 1,
+        "column": 22
+      },
+      "settings": "# Miscellaneous\nThis goal covers any other work or training currently being done by the Chapmans Peak team.",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget.Configuration",
+      "isNameConfigurable": false,
+      "isEnabled": true,
+      "eTag": "23"
+    },
+    {
+      "id": "ce58a850-2a00-45ba-a144-fb5b071a6de4",
+      "name": "Team Members",
+      "size": {
+        "rowSpan": 2,
+        "columnSpan": 3
+      },
+      "position": {
+        "row": 3,
+        "column": 22
+      },
+      "settings": "{\"chartType\":\"stackBarChart\",\"groupKey\":\"96918963-567c-4ba8-aa8d-9a4c7037ce49\",\"scope\":\"WorkitemTracking.Queries\",\"title\":\"Team Members\",\"transformOptions\":{\"filter\":\"96918963-567c-4ba8-aa8d-9a4c7037ce49\",\"groupBy\":\"System.State\",\"orderBy\":{\"propertyName\":\"label\",\"direction\":\"descending\"},\"measure\":{\"aggregation\":\"count\",\"propertyName\":\"\"},\"historyRange\":null,\"series\":\"System.AssignedTo\",\"groupByTags\":true,\"FilteredGroups\":[]},\"userColors\":[{\"value\":\"New\",\"backgroundColor\":\"#cccccc\"},{\"value\":\"Closed\",\"backgroundColor\":\"#00643a\"},{\"value\":\"Active\",\"backgroundColor\":\"#009ccc\"}],\"lastArtifactName\":\"N2CP-Misc (Team) by Assigned To\"}",
+      "settingsVersion": {
+        "major": 3,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.WitChartWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "33"
+    },
+    {
+      "id": "364f8c65-975f-447e-a5de-fc1fdbc487e9",
+      "name": "Closed",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 10,
+        "column": 5
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#00643a\",\"queryId\":\"a50c62cc-448c-4a66-9e84-9bc49ec1acdf\",\"queryName\":\"N2CP-Reboot (Closed)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Reboot (Closed)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "45"
+    },
+    {
+      "id": "50f49500-33b9-428c-b286-fce1fb662a04",
+      "name": "Active",
+      "size": {
+        "rowSpan": 1,
+        "columnSpan": 1
+      },
+      "position": {
+        "row": 2,
+        "column": 23
+      },
+      "settings": "{\"defaultBackgroundColor\":\"#007acc\",\"queryId\":\"8ecff29c-ae27-4b7f-b8e2-11b95e0e8d0d\",\"queryName\":\"N2CP-Misc (Active)\",\"colorRules\":[],\"lastArtifactName\":\"N2CP-Misc (Active)\"}",
+      "settingsVersion": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget",
+      "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.QueryScalarWidget.Configuration",
+      "isNameConfigurable": true,
+      "isEnabled": true,
+      "eTag": "22"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "9b3eab86-ab48-4c89-b13a-09bd5644123a",
+  "name": "Markdown",
+  "size": {
+    "rowSpan": 1,
+    "columnSpan": 3
+  },
+  "position": {
+    "row": 1,
+    "column": 10
+  },
+  "settings": "# Nevis MFA\nThis goal is to use Nevis as a third party solution to implement **multi factor authentication** in an assortment of Swift flows\n- [Repository](https://dev.azure.com/Derivco/PlayerExperience/_git/Platform-Swift-StateMachine-Api)",
+  "settingsVersion": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "contributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget",
+  "configurationContributionId": "ms.vss-dashboards-web.Microsoft.VisualStudioOnline.Dashboards.MarkdownWidget.Configuration",
+  "isNameConfigurable": false,
+  "isEnabled": true,
+  "eTag": "21"
+}

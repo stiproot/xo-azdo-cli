@@ -1,0 +1,23 @@
+{
+  "id": "af81078a-7e7f-4b1c-b6ef-3245c10b77ee",
+  "name": "Work Items",
+  "size": {
+    "rowSpan": 2,
+    "columnSpan": 3
+  },
+  "position": {
+    "row": 5,
+    "column": 4
+  },
+  "settings": "{\"query\":{\"queryId\":\"3d190fdd-2fa8-4c34-897e-6d6efc34c35b\",\"queryName\":\"N2CP-SwiftAccountClosure\"},\"selectedColumns\":[{\"name\":\"Title\",\"referenceName\":\"System.Title\"},{\"name\":\"Assigned To\",\"referenceName\":\"System.AssignedTo\"},{\"name\":\"State\",\"referenceName\":\"System.State\"}],\"lastArtifactName\":\"N2CP-SwiftAccountClosure\"}",
+  "settingsVersion": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "contributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget",
+  "configurationContributionId": "ms.vss-mywork-web.Microsoft.VisualStudioOnline.MyWork.WitViewWidget.Configuration",
+  "isNameConfigurable": true,
+  "isEnabled": true,
+  "eTag": "17"
+}

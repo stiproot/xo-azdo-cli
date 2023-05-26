@@ -1,0 +1,117 @@
+{
+    "id": "6ce473f9-e6eb-4a8c-8c6e-b711897efd43",
+    "name": "tmp - simonst - all bugs",
+    "path": "Shared Queries/Customers and Emerging Markets/Rapid Response/N2 Chapmans Peak Project Team/Tmp/tmp - simonst - all bugs",
+    "createdBy": {
+        "id": "9adfe0de-95da-6431-b89a-26de89c96ae6",
+        "name": "Simon Strathern <Simon.Strathern@derivco.co.za>",
+        "displayName": "Simon Strathern",
+        "url": "https://spsprodweu1.vssps.visualstudio.com/Ada621ffd-3496-420c-9ac6-838f0548e8bc/_apis/Identities/9adfe0de-95da-6431-b89a-26de89c96ae6",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/Derivco/_apis/GraphProfile/MemberAvatars/aad.OWFkZmUwZGUtOTVkYS03NDMxLWI4OWEtMjZkZTg5Yzk2YWU2"
+            }
+        },
+        "uniqueName": "Simon.Strathern@derivco.co.za",
+        "imageUrl": "https://dev.azure.com/Derivco/_apis/GraphProfile/MemberAvatars/aad.OWFkZmUwZGUtOTVkYS03NDMxLWI4OWEtMjZkZTg5Yzk2YWU2",
+        "descriptor": "aad.OWFkZmUwZGUtOTVkYS03NDMxLWI4OWEtMjZkZTg5Yzk2YWU2"
+    },
+    "createdDate": "2023-02-27T10:53:02.47Z",
+    "lastModifiedBy": {
+        "id": "9adfe0de-95da-6431-b89a-26de89c96ae6",
+        "name": "Simon Strathern <Simon.Strathern@derivco.co.za>",
+        "displayName": "Simon Strathern",
+        "url": "https://spsprodweu1.vssps.visualstudio.com/Ada621ffd-3496-420c-9ac6-838f0548e8bc/_apis/Identities/9adfe0de-95da-6431-b89a-26de89c96ae6",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/Derivco/_apis/GraphProfile/MemberAvatars/aad.OWFkZmUwZGUtOTVkYS03NDMxLWI4OWEtMjZkZTg5Yzk2YWU2"
+            }
+        },
+        "uniqueName": "Simon.Strathern@derivco.co.za",
+        "imageUrl": "https://dev.azure.com/Derivco/_apis/GraphProfile/MemberAvatars/aad.OWFkZmUwZGUtOTVkYS03NDMxLWI4OWEtMjZkZTg5Yzk2YWU2",
+        "descriptor": "aad.OWFkZmUwZGUtOTVkYS03NDMxLWI4OWEtMjZkZTg5Yzk2YWU2"
+    },
+    "lastModifiedDate": "2023-02-27T10:53:02.47Z",
+    "queryType": "flat",
+    "columns": [
+        {
+            "referenceName": "System.Id",
+            "name": "ID",
+            "url": "https://dev.azure.com/Derivco/_apis/wit/fields/System.Id"
+        },
+        {
+            "referenceName": "System.Title",
+            "name": "Title",
+            "url": "https://dev.azure.com/Derivco/_apis/wit/fields/System.Title"
+        },
+        {
+            "referenceName": "System.State",
+            "name": "State",
+            "url": "https://dev.azure.com/Derivco/_apis/wit/fields/System.State"
+        }
+    ],
+    "sortColumns": [
+        {
+            "field": {
+                "referenceName": "Microsoft.VSTS.Common.Priority",
+                "name": "Priority",
+                "url": "https://dev.azure.com/Derivco/_apis/wit/fields/Microsoft.VSTS.Common.Priority"
+            },
+            "descending": false
+        },
+        {
+            "field": {
+                "referenceName": "System.CreatedDate",
+                "name": "Created Date",
+                "url": "https://dev.azure.com/Derivco/_apis/wit/fields/System.CreatedDate"
+            },
+            "descending": true
+        }
+    ],
+    "wiql": "select [System.Id], [System.Title], [System.State] from WorkItems where [System.WorkItemType] = 'Bug' and [System.AssignedTo] = 'Simon Strathern <Simon.Strathern@derivco.co.za>' order by [Microsoft.VSTS.Common.Priority] asc, [System.CreatedDate] desc",
+    "isPublic": true,
+    "clauses": {
+        "logicalOperator": "and",
+        "clauses": [
+            {
+                "field": {
+                    "referenceName": "System.WorkItemType",
+                    "name": "Work Item Type",
+                    "url": "https://dev.azure.com/Derivco/_apis/wit/fields/System.WorkItemType"
+                },
+                "operator": {
+                    "referenceName": "SupportedOperations.Equals",
+                    "name": "="
+                },
+                "value": "Bug"
+            },
+            {
+                "field": {
+                    "referenceName": "System.AssignedTo",
+                    "name": "Assigned To",
+                    "url": "https://dev.azure.com/Derivco/_apis/wit/fields/System.AssignedTo"
+                },
+                "operator": {
+                    "referenceName": "SupportedOperations.Equals",
+                    "name": "="
+                },
+                "value": "Simon Strathern <Simon.Strathern@derivco.co.za>"
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "https://dev.azure.com/Derivco/31fcfce5-c6a2-4173-8ad2-c9535f3f83bd/_apis/wit/queries/6ce473f9-e6eb-4a8c-8c6e-b711897efd43"
+        },
+        "html": {
+            "href": "https://dev.azure.com/Derivco/web/qr.aspx?pguid=31fcfce5-c6a2-4173-8ad2-c9535f3f83bd&qid=6ce473f9-e6eb-4a8c-8c6e-b711897efd43"
+        },
+        "parent": {
+            "href": "https://dev.azure.com/Derivco/31fcfce5-c6a2-4173-8ad2-c9535f3f83bd/_apis/wit/queries/483aa785-1255-48b5-bb55-f5969dec64aa"
+        },
+        "wiql": {
+            "href": "https://dev.azure.com/Derivco/31fcfce5-c6a2-4173-8ad2-c9535f3f83bd/_apis/wit/wiql/6ce473f9-e6eb-4a8c-8c6e-b711897efd43"
+        }
+    },
+    "url": "https://dev.azure.com/Derivco/31fcfce5-c6a2-4173-8ad2-c9535f3f83bd/_apis/wit/queries/6ce473f9-e6eb-4a8c-8c6e-b711897efd43"
+}

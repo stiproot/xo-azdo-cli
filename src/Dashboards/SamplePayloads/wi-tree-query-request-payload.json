@@ -1,0 +1,108 @@
+{
+  "contributionIds": [
+    "ms.vss-work-web.work-item-query-data-provider"
+  ],
+  "context": {
+    "properties": {
+      "wiql": "select [System.Id], [System.WorkItemType], [System.Title], [System.AssignedTo], [System.State], [System.Tags] from WorkItemLinks where (Source.[System.TeamProject] = @project and Source.[System.WorkItemType] <> '' and Source.[System.IterationPath] = @currentIteration('[Software]\\CEM - N2 Chapmans Peak Project Team <id:2ce48d21-05d3-44f9-a464-070558c0f273>') and Source.[System.Tags] contains 'N2CP-SwiftAccountClosure' and Source.[Microsoft.VSTS.Scheduling.StoryPoints] >= 1) and ([System.Links.LinkType] = 'System.LinkTypes.Hierarchy-Forward') and (Target.[System.TeamProject] = @project and Target.[System.WorkItemType] <> '' and Target.[System.Tags] contains 'N2CP-SwiftAccountClosure' and Target.[Microsoft.VSTS.Scheduling.RemainingWork] > 0 and Target.[Microsoft.VSTS.Scheduling.OriginalEstimate] > 0) mode (Recursive)",
+      "fields": [
+        "System.Id;70",
+        "System.WorkItemType;75",
+        "System.Title;450",
+        "System.AssignedTo;125",
+        "System.State;75",
+        "System.Tags;200"
+      ],
+      "top": null,
+      "persistenceId": "3d190fdd-2fa8-4c34-897e-6d6efc34c35b",
+      "isDirty": false,
+      "pageSource": {
+        "contributionPaths": [
+          "VSS",
+          "VSS/Resources",
+          "q",
+          "knockout",
+          "mousetrap",
+          "mustache",
+          "react",
+          "react-dom",
+          "react-transition-group",
+          "jQueryUI",
+          "jquery",
+          "OfficeFabric",
+          "tslib",
+          "@uifabric",
+          "VSSUI",
+          "ContentRendering",
+          "ContentRendering/Resources",
+          "WidgetComponents",
+          "WidgetComponents/Resources",
+          "Charts",
+          "Charts/Resources",
+          "TFSUI",
+          "TFSUI/Resources",
+          "TFS",
+          "Notifications",
+          "Presentation/Scripts/marked",
+          "Presentation/Scripts/URI",
+          "Presentation/Scripts/punycode",
+          "Presentation/Scripts/IPv6",
+          "Presentation/Scripts/SecondLevelDomains",
+          "highcharts",
+          "highcharts/highcharts-more",
+          "highcharts/modules/accessibility",
+          "highcharts/modules/heatmap",
+          "highcharts/modules/funnel",
+          "Analytics"
+        ],
+        "diagnostics": {
+          "sessionId": "17cc4e23-306e-495d-b769-49a7ed3e1844",
+          "activityId": "17cc4e23-306e-495d-b769-49a7ed3e1844",
+          "bundlingEnabled": true,
+          "cdnAvailable": true,
+          "webPlatformVersion": "M218",
+          "serviceVersion": "Dev19.M218.1 (build: AzureDevOps_M218_20230317.1)"
+        },
+        "navigation": {
+          "topMostLevel": 8,
+          "area": "",
+          "currentController": "Apps",
+          "currentAction": "ContributedHub",
+          "commandName": "ms.vss-work-web.query-route",
+          "routeId": "ms.vss-work-web.query-route",
+          "routeTemplates": [
+            "{project}/{team}/_queries/{view}/{id}/{*parameters}",
+            "{project}/_queries/{view}/{id}/{*parameters}",
+            "{project}/{team}/_workitems/{view}/{id}/{*parameters}",
+            "{project}/_workitems/{view}/{id}/{*parameters}"
+          ],
+          "routeValues": {
+            "project": "Software",
+            "view": "query-edit",
+            "id": "3d190fdd-2fa8-4c34-897e-6d6efc34c35b",
+            "controller": "Apps",
+            "action": "ContributedHub"
+          }
+        },
+        "project": {
+          "id": "31fcfce5-c6a2-4173-8ad2-c9535f3f83bd",
+          "name": "Software"
+        },
+        "selectedHubGroupId": "ms.vss-work-web.work-hub-group",
+        "selectedHubId": "ms.vss-work-web.query-hub",
+        "url": "https://dev.azure.com/Derivco/Software/_queries/query-edit/3d190fdd-2fa8-4c34-897e-6d6efc34c35b/"
+      },
+      "sourcePage": {
+        "url": "https://dev.azure.com/Derivco/Software/_queries/query-edit/3d190fdd-2fa8-4c34-897e-6d6efc34c35b/",
+        "routeId": "ms.vss-work-web.query-route",
+        "routeValues": {
+          "project": "Software",
+          "view": "query-edit",
+          "id": "3d190fdd-2fa8-4c34-897e-6d6efc34c35b",
+          "controller": "Apps",
+          "action": "ContributedHub"
+        }
+      }
+    }
+  }
+}
