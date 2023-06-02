@@ -11,8 +11,8 @@ global using Xo.AzDO.Cli.Mappers;
 global using Newtonsoft.Json;
 global using Xo.TaskFlow.Abstractions;
 global using Xo.TaskFlow.Core;
-global using Algo.RectangleStacking.Abstractions;
-global using Algo.RectangleStacking.Structures;
-global using Algo.RectangleStacking;
+global using Xo.Algo.RectangleCluster.Abstractions;
+global using Xo.Algo.RectangleCluster.Structures;
+global using Xo.Algo.RectangleCluster;
 
 global using System.Reflection;

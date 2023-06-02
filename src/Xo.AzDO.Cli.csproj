@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Xo.TaskFlow" Version="1.0.2" />
+    <PackageReference Include="Xo.Algo.RectangleCluster" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
