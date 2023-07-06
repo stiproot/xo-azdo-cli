@@ -2,7 +2,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
-using Xo.TaskFlow.DependencyInjection.Extensions;
+using Xo.TaskTree.DependencyInjection.Extensions;
 
 namespace Xo.AzDO.Cli.Extensions;
 
@@ -28,10 +28,8 @@ internal static class ServiceCollectionExtensions
 		@this.TryAddSingleton<IProcessor<CreateDashboardWorkflowCmd, DashboardWorkflowRes>, DashboardWorkflowProcessor>();
 		@this.TryAddSingleton<IProcessor<CreateDashboardCmd, DashboardRes>, DashboardProcessor>();
 		@this.TryAddSingleton<IProcessor<QueryCmd, QueryRes>, QueryProcessor>();
-
 		@this.TryAddSingleton<IProcessor<CreateFolderCmd, FolderRes>, CreateFolderProcessor>();
 		@this.TryAddSingleton<IProcessor<GetFolderCmd, FolderRes>, GetFolderProcessor>();
-
 		@this.TryAddSingleton<IProcessor<BuildWiqlCmd, WiqlRes>, WiqlProcessor>();
 		@this.TryAddSingleton<IProcessor<GetProjectDetailsCmd, ProjectRes>, ProjectProcessor>();
 		@this.TryAddSingleton<IProcessor<GetTeamDetailsCmd, TeamRes>, TeamProcessor>();
@@ -41,14 +39,12 @@ internal static class ServiceCollectionExtensions
 		@this.TryAddSingleton<ITypeSerializer, TypeSerializer>();
 		@this.TryAddSingleton<IProvider<CreateDashboardWorkflowCmd>, DashboardWorkflowCmdProvider>();
 		@this.TryAddSingleton<IProvider<IEnumerable<CreateWiCmd>>, CreateWiCmdProvider>();
-		@this.TryAddSingleton<ITypeMapper<CreateWiCmd, ExtWiReq>, ExtWiReqMapper>();
-
+		@this.TryAddSingleton<IMapper<CreateWiCmd, ExtWiReq>, ExtWiReqMapper>();
 		@this.TryAddSingleton<IWidgetBuilderFactory, WidgetBuilderFactory>();
-
 		@this.TryAddSingleton<IWorkflow<CreateFolderCmd>, QueryFolderWorkflow>();
 		@this.TryAddSingleton<IWorkflow<CreateDashboardWorkflowCmd>, PrerequisitsWorkflow>();
 
-		@this.AddTaskWorkflowEngineServices();
+		@this.AddTaskTreeServices();
 
 		return @this;
 	}

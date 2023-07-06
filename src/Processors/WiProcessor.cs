@@ -2,14 +2,19 @@
 
 internal class WiProcessor : BaseHttpProcessor, IProcessor<CreateWiCmd, WiRes>
 {
-	private readonly ITypeMapper<CreateWiCmd, ExtWiReq> _extReqMapper;
+	private readonly IMapper<CreateWiCmd, ExtWiReq> _extReqMapper;
 	const string API_VERSION = "7.0";
 
 	public WiProcessor(
 		IHttpClientFactory httpClientFactory,
 		ITypeSerializer typeSerializer,
-		ITypeMapper<CreateWiCmd, ExtWiReq> typeMapper
-	) : base(httpClientFactory, API_VERSION, typeSerializer) => this._extReqMapper = typeMapper ?? throw new ArgumentNullException(nameof(typeMapper));
+		IMapper<CreateWiCmd, ExtWiReq> typeMapper
+	) : base(
+				httpClientFactory, 
+				API_VERSION, 
+				typeSerializer
+	) 
+		=> this._extReqMapper = typeMapper ?? throw new ArgumentNullException(nameof(typeMapper));
 
 	public async Task<WiRes> ProcessAsync(CreateWiCmd cmd)
 	{
@@ -39,5 +44,8 @@ internal class WiProcessor : BaseHttpProcessor, IProcessor<CreateWiCmd, WiRes>
 		}
 	}
 
-	private void Enrich(CreateWiCmd cmd) => cmd.children.ToList().ForEach(c => c.relation = new Models.WorkItemRelation { relation_type = "Child", url = cmd.ExtResp.url });
+	private void Enrich(CreateWiCmd cmd) 
+		=> cmd.children
+			.ToList()
+			.ForEach(c => c.relation = new Models.WorkItemRelation { relation_type = "Child", url = cmd.ExtResp.url });
 }

@@ -1,18 +1,23 @@
 internal class PrerequisitsWorkflow : BaseWorkflow, IWorkflow<CreateDashboardWorkflowCmd>
 {
-	private readonly IAsyncFunctory _teamDetailsFunctory;
-	private readonly IAsyncFunctory _iterationsFunctory;
+	private readonly IAsyncFn _teamDetailsFn;
+	private readonly IAsyncFn _iterationsFn;
 
 	public PrerequisitsWorkflow(
 		INodeBuilderFactory nodeBuilderFactory,
-		IFunctitect functitect
-	) : base(nodeBuilderFactory, functitect)
+		IFnFactory fnFactory,
+		IStateManager stateManager
+	) : base(
+			nodeBuilderFactory, 
+			fnFactory, 
+			stateManager
+	)
 	{
-		this._teamDetailsFunctory = this._Functitect
+		this._teamDetailsFn = this._FnFactory
 			.Build(typeof(IProcessor<GetTeamDetailsCmd, TeamRes>))
 			.AsAsync();
 
-		this._iterationsFunctory = this._Functitect
+		this._iterationsFn = this._FnFactory
 			.Build(typeof(IProcessor<GetIterationsCmd, IterationsRes>))
 			.AsAsync();
 	}
@@ -22,17 +27,24 @@ internal class PrerequisitsWorkflow : BaseWorkflow, IWorkflow<CreateDashboardWor
 		CreateDashboardWorkflowCmd cmd
 	)
 	{
-		var getTeamDetails = this._NodeBuilderFactory.Create("__team_details__")
-			.AddContext(context)
-			.AddFunctory(this._teamDetailsFunctory)
-			.AddArg(new GetTeamDetailsCmd { TeamId = cmd.TeamName, ProjectId = "Software", })
+		var getTeamDetails = this._NodeBuilderFactory.Create()
+			.Configure(c => 
+				c
+					.SetId("__team_details__")
+					.AddContext(context)
+					.AddArg(new GetTeamDetailsCmd { TeamId = cmd.TeamName, ProjectId = "Software" })
+				)
+			.AddFn(this._teamDetailsFn)
 			.Build();
 
-		var getIterations = this._NodeBuilderFactory.Create("__team_iterations__")
-			.AddContext(context)
-			.AddFunctory(this._iterationsFunctory)
-			.AddArg(new GetIterationsCmd { TeamName = cmd.TeamName, ProjectId = "Software" })
-			.AddArg(getTeamDetails)
+		var getIterations = this._NodeBuilderFactory.Create()
+			.Configure(c => 
+				c
+					.SetId("__team_iterations__")
+					.AddContext(context)
+					.AddArg(getTeamDetails)
+			)
+			.AddFn(this._iterationsFn)
 			.Build();
 
 		return getIterations;

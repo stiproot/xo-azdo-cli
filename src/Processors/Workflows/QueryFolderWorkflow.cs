@@ -2,23 +2,26 @@ internal class QueryFolderWorkflow : BaseWorkflow, IWorkflow<CreateFolderCmd>
 {
 	public QueryFolderWorkflow(
 		INodeBuilderFactory nodeBuilderFactory,
-		IFunctitect functitect
-	) : base(nodeBuilderFactory, functitect) { }
-
-	// internal class _NotNullBinaryBranchNodePathResolver : IBinaryBranchNodePathResolver
-	// {
-	// public bool Resolve(IMsg? msg) => msg is not null;
-	// }
+		IFnFactory fnFactory,
+		IStateManager stateManager
+	) : base(nodeBuilderFactory, fnFactory, stateManager) { }
 
 	public INode Init(
 		IWorkflowContext context,
 		CreateFolderCmd cmd
 	)
 	{
-		return this._NodeBuilderFactory.Binary(context)
-			.IsNotNull<IProcessor<GetFolderCmd, FolderRes>>()
-			.AddFalse<IProcessor<CreateFolderCmd, FolderRes>, CreateFolderCmd>(args: cmd, requiresResult: false)
-			.AddArg(new GetFolderCmd { FolderName = cmd.FolderName, QueryFolderPath = cmd.QueryFolderPath })
+		return this._StateManager
+			// todo: update this...
+			// .IsNotNull<IProcessor<GetFolderCmd, FolderRes>>()
+			.RootIf<IProcessor<GetFolderCmd,FolderRes>>(c => 
+				c
+					.MatchArg(new GetFolderCmd { FolderName = cmd.FolderName, QueryFolderPath = cmd.QueryFolderPath })
+			)
+			.Else<IProcessor<CreateFolderCmd, FolderRes>>(configure:c => 
+				c
+					.MatchArg(cmd)
+			)
 			.Build();
 	}
 }

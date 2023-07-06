@@ -1,6 +1,6 @@
 namespace Xo.AzDO.Cli.Mappers;
 
-internal sealed class ExtWiReqMapper : ITypeMapper<CreateWiCmd, ExtWiReq>
+internal sealed class ExtWiReqMapper : IMapper<CreateWiCmd, ExtWiReq>
 {
 	private static IDictionary<string, string> PropertyNameMappings = new Dictionary<string, string>
 	{
@@ -39,7 +39,7 @@ internal sealed class ExtWiReqMapper : ITypeMapper<CreateWiCmd, ExtWiReq>
 			{
 				op = "add",
 				path = PropertyNameMappings[propInfo.Name],
-				value = (string)propInfo.GetValue(cmd)
+				value = (string)propInfo.GetValue(cmd)!
 			}
 		};
 	}
@@ -50,80 +50,10 @@ internal sealed class ExtWiReqMapper : ITypeMapper<CreateWiCmd, ExtWiReq>
 			cmd
 				.GetType()
 				.GetProperties()
-				.Where(p => !PropsToExclude.Contains(p.Name))
-				.Where(p => p.GetValue(cmd) != null)
+				.Where(p => PropsToExclude.Contains(p.Name) is false)
+				.Where(p => p.GetValue(cmd) is not null)
 				.Select(p => PropNameSwitch(p, cmd));
 
 		return new ExtWiReq { workitem_payload = payload };
-
-		//return new ExtWiReq
-		//{
-		//workitem_payload = new List<Object>
-		//{
-		//new
-		//{
-		//op = "add",
-		//path = "/fields/System.Title",
-		//value = cmd.title
-		//},
-		//new
-		//{
-		//op = "add",
-		//path = "/fields/System.AreaPath",
-		//value = cmd.area_path
-		//},
-		//new
-		//{
-		//op = "add",
-		//path = "/fields/System.IterationPath",
-		//value = cmd.iteration_path
-		//},
-		//new
-		//{
-		//op = "add",
-		//path = "/fields/System.Tags",
-		//value = cmd.tags
-		//},
-		//new
-		//{
-		//op = "add",
-		//path = "/fields/System.Description",
-		//value = cmd.description
-		//},
-		//new
-		//{
-		//op = "add",
-		//path = "/fields/Microsoft.VSTS.Common.AcceptanceCriteria",
-		//value = cmd.acceptance_criteria
-		//},
-		//new
-		//{
-		//op = "add",
-		//path = "/fields/System.State",
-		//value = cmd.state
-		//},
-		//new
-		//{
-		//op = "add",
-		//path = "/relations/-",
-		//value = new
-		//{
-		//rel = cmd.relation.relation_type switch
-		//{
-		//"Child"     => "System.LinkTypes.Hierarchy-Reverse",
-		//_           => throw new InvalidOperationException()
-		//},
-		//url = cmd.relation.url
-		//}
-		//}
-		//},
-		//workitem_type = cmd.type switch
-		//{
-		//"User Story" => "User Story",
-		//"Feature" => "Feature",
-		//"Task" => "Task",
-		//_ => throw new InvalidOperationException()
-		//}
-		//};
 	}
 }

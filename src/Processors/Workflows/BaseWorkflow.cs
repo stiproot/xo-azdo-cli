@@ -1,14 +1,17 @@
 internal abstract class BaseWorkflow
 {
 	protected readonly INodeBuilderFactory _NodeBuilderFactory;
-	protected readonly IFunctitect _Functitect;
+	protected readonly IFnFactory _FnFactory;
+	protected readonly IStateManager _StateManager;
 
 	public BaseWorkflow(
 		INodeBuilderFactory nodeBuilderFactory,
-		IFunctitect functitect
+		IFnFactory fnFactory,
+		IStateManager stateManager
 	)
 	{
 		this._NodeBuilderFactory = nodeBuilderFactory ?? throw new ArgumentNullException(nameof(nodeBuilderFactory));
-		this._Functitect = functitect ?? throw new ArgumentNullException(nameof(functitect));
+		this._FnFactory = fnFactory ?? throw new ArgumentNullException(nameof(fnFactory));
+		this._StateManager = stateManager ?? throw new ArgumentNullException(nameof(stateManager));
 	}
 }
