@@ -1,5 +1,4 @@
-
-namespace AzureDevOpsClient.Models.External.Response;
+namespace Xo.AzDO.Cli.Models.External.Response;
 
 internal sealed class ExtGetWiResp
 {

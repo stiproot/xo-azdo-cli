@@ -1,4 +1,25 @@
-namespace AzureDevOpsClient.Models.External.Response;
+namespace Xo.AzDO.Cli.Models.External.Response;
+
+internal class ExtQueryByWiqlResp
+{
+    [JsonProperty("queryType")]
+    public string QueryType { get; init; }
+
+    [JsonProperty("queryResultType")]
+    public string QueryResultType { get; init; }
+
+    [JsonProperty("asOf")]
+    public DateTime AsOf { get; init; }
+
+    [JsonProperty("columns")]
+    public List<ExtQueryByWiqlColumn> Columns { get; init; }
+
+    [JsonProperty("sortColumns")]
+    public List<ExtQueryByWiqlSortColumn> SortColumns { get; init; }
+
+    [JsonProperty("workItems")]
+    public List<ExtQueryByWiqlWorkItem> WorkItems { get; init; }
+}
 
 internal class ExtQueryByWiqlColumn
 {
@@ -42,23 +63,3 @@ internal class ExtQueryByWiqlWorkItem
     public string Url { get; init; }
 }
 
-internal class ExtQueryByWiqlQueryResult
-{
-    [JsonProperty("queryType")]
-    public string QueryType { get; init; }
-
-    [JsonProperty("queryResultType")]
-    public string QueryResultType { get; init; }
-
-    [JsonProperty("asOf")]
-    public DateTime AsOf { get; init; }
-
-    [JsonProperty("columns")]
-    public List<Column> Columns { get; init; }
-
-    [JsonProperty("sortColumns")]
-    public List<ExtQueryByWiqlSortColumn> SortColumns { get; init; }
-
-    [JsonProperty("workItems")]
-    public List<ExtQueryByWiqlWorkItem> WorkItems { get; init; }
-}

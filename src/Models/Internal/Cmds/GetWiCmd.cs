@@ -1,4 +1,4 @@
-namespace AzureDevOpsClient.Models;
+namespace Xo.AzDO.Cli.Models;
 
 internal class GetWiCmd : IProcessorCmd
 {

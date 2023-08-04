@@ -1,5 +1,4 @@
-
-namespace AzureDevOpsClient.Models;
+namespace Xo.AzDO.Cli.Models;
 
 internal class CloneWiCmd : IProcessorCmd
 {
