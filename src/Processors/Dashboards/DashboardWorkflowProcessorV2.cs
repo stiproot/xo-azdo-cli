@@ -19,7 +19,7 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 
 	public DashboardWorkflowProcessorV2(
 		INodeBuilderFactory nodeBuilderFactory,
-		IFn fn,
+		IFn fnFactory,
 		IWorkflowContextFactory workflowContextFactory,
 		IMsgFactory msgFactory,
 		ITypeSerializer typeSerializer,
@@ -29,7 +29,7 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 	)
 	{
 		this._nodeBuilderFactory = nodeBuilderFactory ?? throw new ArgumentNullException(nameof(nodeBuilderFactory));
-		this._fnFactory = fn ?? throw new ArgumentNullException(nameof(fn));
+		this._fnFactory = _fnFactory ?? throw new ArgumentNullException(nameof(fnFactory));
 		this._workflowContextFactory = workflowContextFactory ?? throw new ArgumentNullException(nameof(workflowContextFactory));
 		this._msgFactory = msgFactory ?? throw new ArgumentNullException(nameof(msgFactory));
 		this._typeSerializer = typeSerializer ?? throw new ArgumentNullException(nameof(typeSerializer));
@@ -38,11 +38,9 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 		this._prerequisitsWorkflow = prerequisitsWorkflow ?? throw new ArgumentNullException(nameof(prerequisitsWorkflow));
 
 		this._queryFn = this._fnFactory
-			.Build(typeof(IProcessor<QueryCmd, QueryRes>))
-			.AsAsync();
+			.Build(typeof(IProcessor<QueryCmd, QueryRes>));
 		this._dashboardFn = this._fnFactory
-			.Build(typeof(IProcessor<CreateDashboardCmd, DashboardRes>))
-			.AsAsync();
+			.Build(typeof(IProcessor<CreateDashboardCmd, DashboardRes>));
 	}
 
 	public async Task<DashboardWorkflowRes> ProcessAsync(CreateDashboardWorkflowCmd cmd)
@@ -54,14 +52,14 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 
 		await this._createQueryFolderWorkflow
 			.Init(context, new CreateFolderCmd { FolderName = cmd.IterationName, QueryFolderPath = cmd.QueryFolderBasePath })
-			.Run(cancellationToken);
+			.Resolve(cancellationToken);
 
 		await this._prerequisitsWorkflow
 			.Init(context, cmd)
-			.Run(cancellationToken);
+			.Resolve(cancellationToken);
 
 		var dashboard = this.BuildWorkflow(cmd, context);
-		await dashboard.Run(cancellationToken);
+		await dashboard.Resolve(cancellationToken);
 
 		return new DashboardWorkflowRes { };
 	}
@@ -219,7 +217,7 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 						}
 					}
 				},
-				id => c => () =>
+				id => c =>
 				{
 					var res = c.GetMsgData<QueryRes>(id)!.ExtResp;
 
@@ -264,7 +262,7 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 						}
 					}
 				},
-				id => c => () =>
+				id => c =>
 				{
 					var res = c.GetMsgData<QueryRes>(id)!.ExtResp;
 
@@ -308,7 +306,7 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 						}
 					}
 				},
-				id => c => () =>
+				id => c =>
 				{
 					var res = c.GetMsgData<QueryRes>(id)!.ExtResp;
 
@@ -365,7 +363,7 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 						}
 					}
 				},
-				id => c => () =>
+				id => c =>
 				{
 					var res = c.GetMsgData<QueryRes>(id)!.ExtResp;
 
@@ -417,7 +415,7 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 							}
 						}
 					},
-					id => c => () =>
+					id => c =>
 					{
 						var res = c.GetMsgData<QueryRes>(id)!.ExtResp;
 						string settings = this._typeSerializer.Serialize<WitViewWidgetSettings>(new WitViewWidgetSettings()
@@ -441,9 +439,9 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 			);
 		}
 
-		Func<IWorkflowContext, Func<IMsg?>> fn = c => () =>
+		Func<IWorkflowContext, IMsg?> fn = c =>
 		{
-			string[] ids = promisedWidgets.Select(w => w.Id).ToArray();
+			string[] ids = promisedWidgets.Select(w => w.NodeConfiguration.Id).ToArray();
 			var ws = c.GetMsgs(ids)
 				.Select(m => (m as Msg<Widget>)!.GetData())
 				.ToList();
@@ -460,15 +458,15 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 		};
 
 		var dashboardCmd =
-			this._nodeBuilderFactory.Create(context)
-				.AddArg(promisedWidgets.ToArray())
-				.AddFunctory(fn)
+			this._nodeBuilderFactory.Create()
+				.Configure(c => c.AddContext(context).AddArg(promisedWidgets.ToArray()))
+				.AddFn(fn)
 				.Build();
 
 		var dashboard =
-			this._nodeBuilderFactory.Create(context)
-				.AddFunctory(this._dashboardFn)
-				.AddArg(dashboardCmd)
+			this._nodeBuilderFactory.Create()
+				.Configure(c => c.AddContext(context).MatchArg(dashboardCmd))
+				.AddFn(this._dashboardFn)
 				.Build();
 
 		return dashboard;
@@ -477,18 +475,20 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 	private INode BuildQueryWidgetWorkflow(
 		IWorkflowContext context,
 		QueryCmd cmd,
-		Func<string, Func<IWorkflowContext, Func<IMsg?>>> fn
+		Func<string, Func<IWorkflowContext, IMsg?>> fn
 	)
 	{
-		var qry = this._nodeBuilderFactory.Create(context)
-			.AddFunctory(this._queryFn)
-			.AddArg(cmd)
-			.Build();
+		var qry = 
+			this._nodeBuilderFactory.Create()
+				.Configure(c => c.MatchArg(cmd).AddContext(context))
+				.AddFn(this._queryFn)
+				.Build();
 
-		var widget = this._nodeBuilderFactory.Create(context)
-			.AddArg(qry)
-			.AddFunctory(fn(qry.Id))
-			.Build();
+		var widget = 
+			this._nodeBuilderFactory.Create()
+				.Configure(c => c.MatchArg(qry).AddContext(context))
+				.AddFn(fn(qry.NodeConfiguration.Id))
+				.Build();
 
 		return widget;
 	}
