@@ -1,4 +1,4 @@
-namespace AzureDevOpsClient.Processors;
+namespace Xo.AzDO.Cli.Processors;
 
 internal class GetWiProcessor : BaseHttpProcessor, IProcessor<GetWiCmd, GetWiRes>
 {
