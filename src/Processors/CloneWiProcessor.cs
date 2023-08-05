@@ -1,5 +1,4 @@
-
-namespace AzureDevOpsClient.Processors;
+namespace Xo.AzDO.Cli.Processors;
 
 internal class CloneWiProcessor : BaseHttpProcessor, IProcessor<CloneWiCmd, CloneWiRes>
 {

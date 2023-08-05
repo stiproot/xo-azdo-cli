@@ -1,4 +1,4 @@
-namespace AzureDevOpsClient;
+namespace Xo.AzDO;
 
 internal static class Core
 {
@@ -20,6 +20,15 @@ internal static class Core
 		processor.ProcessAsync(cmd).Wait();
 	}
 
+	public static void QueryByWiql()
+	{
+		var provider = ServiceProviderFactory.Create();
+		var cmd = provider.GetServiceType<IProvider<QueryByWiqlCmd>>().Provide();
+		var processor = provider.GetServiceType<IProcessor<QueryByWiqlCmd, QueryByWiqlRes>>();
+
+		processor.ProcessAsync(cmd).Wait();
+	}
+
 	public static void Dashboard()
 	{
 		var provider = ServiceProviderFactory.Create();
@@ -37,7 +46,7 @@ internal static class Core
 		var context = workflowContextFactory.Create();
 		var cmd = new CreateFolderCmd { FolderName = "Trx", QueryFolderPath = "Shared Queries/Customers and Emerging Markets/Rapid Response/N2 Chapmans Peak Project Team" };
 		var workflow = provider.GetServiceType<IWorkflow<CreateFolderCmd>>();
-		var msg = workflow.Init(context, cmd).Run(cancellationToken).Result;
+		var msg = workflow.Init(context, cmd).Resolve(cancellationToken).Result;
 
 		Console.WriteLine(msg);
 	}

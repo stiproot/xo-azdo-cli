@@ -3,15 +3,15 @@ namespace Xo.AzDO.Cli.Processors;
 internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflowCmd, DashboardWorkflowRes>
 {
 	private readonly INodeBuilderFactory _nodeBuilderFactory;
-	private readonly IFunctitect _functitect;
+	private readonly IFnFactory _fnFactory;
 	private readonly IWorkflowContextFactory _workflowContextFactory;
 	private readonly IMsgFactory _msgFactory;
 	private readonly ITypeSerializer _typeSerializer;
 	private readonly IWidgetBuilderFactory _widgetBuilderFactory;
 	private readonly IWorkflow<CreateFolderCmd> _createQueryFolderWorkflow;
 	private readonly IWorkflow<CreateDashboardWorkflowCmd> _prerequisitsWorkflow;
-	private readonly IAsyncFunctory _queryFunctory;
-	private readonly IAsyncFunctory _dashboardFunctory;
+	private readonly IFn _queryFn;
+	private readonly IFn _dashboardFn;
 	private IDictionary<string, IRectangle> _rootHash;
 	private IDictionary<string, IRectangle> _childHash;
 
@@ -19,7 +19,7 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 
 	public DashboardWorkflowProcessorV2(
 		INodeBuilderFactory nodeBuilderFactory,
-		IFn functitect,
+		IFn fn,
 		IWorkflowContextFactory workflowContextFactory,
 		IMsgFactory msgFactory,
 		ITypeSerializer typeSerializer,
@@ -29,7 +29,7 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 	)
 	{
 		this._nodeBuilderFactory = nodeBuilderFactory ?? throw new ArgumentNullException(nameof(nodeBuilderFactory));
-		this._functitect = functitect ?? throw new ArgumentNullException(nameof(functitect));
+		this._fnFactory = fn ?? throw new ArgumentNullException(nameof(fn));
 		this._workflowContextFactory = workflowContextFactory ?? throw new ArgumentNullException(nameof(workflowContextFactory));
 		this._msgFactory = msgFactory ?? throw new ArgumentNullException(nameof(msgFactory));
 		this._typeSerializer = typeSerializer ?? throw new ArgumentNullException(nameof(typeSerializer));
@@ -37,10 +37,10 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 		this._createQueryFolderWorkflow = createQueryFolderWorkflow ?? throw new ArgumentNullException(nameof(createQueryFolderWorkflow));
 		this._prerequisitsWorkflow = prerequisitsWorkflow ?? throw new ArgumentNullException(nameof(prerequisitsWorkflow));
 
-		this._queryFunctory = this._functitect
+		this._queryFn = this._fnFactory
 			.Build(typeof(IProcessor<QueryCmd, QueryRes>))
 			.AsAsync();
-		this._dashboardFunctory = this._functitect
+		this._dashboardFn = this._fnFactory
 			.Build(typeof(IProcessor<CreateDashboardCmd, DashboardRes>))
 			.AsAsync();
 	}
@@ -467,7 +467,7 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 
 		var dashboard =
 			this._nodeBuilderFactory.Create(context)
-				.AddFunctory(this._dashboardFunctory)
+				.AddFunctory(this._dashboardFn)
 				.AddArg(dashboardCmd)
 				.Build();
 
@@ -481,7 +481,7 @@ internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflow
 	)
 	{
 		var qry = this._nodeBuilderFactory.Create(context)
-			.AddFunctory(this._queryFunctory)
+			.AddFunctory(this._queryFn)
 			.AddArg(cmd)
 			.Build();
 

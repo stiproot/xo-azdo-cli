@@ -10,8 +10,8 @@ internal class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCm
 	private readonly IWidgetBuilderFactory _widgetBuilderFactory;
 	private readonly IWorkflow<CreateFolderCmd> _createQueryFolderWorkflow;
 	private readonly IWorkflow<CreateDashboardWorkflowCmd> _prerequisitsWorkflow;
-	private readonly IAsyncFn _queryFn;
-	private readonly IAsyncFn _dashboardFn;
+	private readonly IFn _queryFn;
+	private readonly IFn _dashboardFn;
 	private IDictionary<string, IRectangle> _rootHash;
 	private IDictionary<string, IRectangle> _childHash;
 
@@ -38,11 +38,9 @@ internal class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCm
 		this._prerequisitsWorkflow = prerequisitsWorkflow ?? throw new ArgumentNullException(nameof(prerequisitsWorkflow));
 
 		this._queryFn = this._functitect
-			.Build(typeof(IProcessor<QueryCmd, QueryRes>))
-			.AsAsync();
+			.Build(typeof(IProcessor<QueryCmd, QueryRes>));
 		this._dashboardFn = this._functitect
-			.Build(typeof(IProcessor<CreateDashboardCmd, DashboardRes>))
-			.AsAsync();
+			.Build(typeof(IProcessor<CreateDashboardCmd, DashboardRes>));
 	}
 
 	public async Task<DashboardWorkflowRes> ProcessAsync(CreateDashboardWorkflowCmd cmd)
@@ -54,14 +52,14 @@ internal class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCm
 
 		await this._createQueryFolderWorkflow
 			.Init(context, new CreateFolderCmd { FolderName = cmd.IterationName, QueryFolderPath = cmd.QueryFolderBasePath })
-			.Run(cancellationToken);
+			.Resolve(cancellationToken);
 
 		await this._prerequisitsWorkflow
 			.Init(context, cmd)
-			.Run(cancellationToken);
+			.Resolve(cancellationToken);
 
 		var dashboard = this.BuildWorkflow(cmd, context);
-		await dashboard.Run(cancellationToken);
+		await dashboard.Resolve(cancellationToken);
 
 		return new DashboardWorkflowRes { };
 	}
@@ -550,19 +548,17 @@ internal class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCm
 				.Configure(c => 
 					c
 						.AddContext(context)
-						.AddArg(cmd)
+						.MatchArg(cmd)
 				)
 				.AddFn(this._queryFn)
-				.AddArg(cmd)
 				.Build();
 
 		var widget = 
 			this._nodeBuilderFactory.Create()
 				.Configure(c => 
 					c
-						.AddArg(qry)
+						.MatchArg(qry)
 				)
-				.AddArg(qry)
 				.AddFn(fn(qry.NodeConfiguration.Id))
 				.Build();
 

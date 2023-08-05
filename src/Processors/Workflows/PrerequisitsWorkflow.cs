@@ -1,7 +1,7 @@
 internal class PrerequisitsWorkflow : BaseWorkflow, IWorkflow<CreateDashboardWorkflowCmd>
 {
-	private readonly IAsyncFn _teamDetailsFn;
-	private readonly IAsyncFn _iterationsFn;
+	private readonly IFn _teamDetailsFn;
+	private readonly IFn _iterationsFn;
 
 	public PrerequisitsWorkflow(
 		INodeBuilderFactory nodeBuilderFactory,
@@ -14,12 +14,10 @@ internal class PrerequisitsWorkflow : BaseWorkflow, IWorkflow<CreateDashboardWor
 	)
 	{
 		this._teamDetailsFn = this._FnFactory
-			.Build(typeof(IProcessor<GetTeamDetailsCmd, TeamRes>))
-			.AsAsync();
+			.Build(typeof(IProcessor<GetTeamDetailsCmd, TeamRes>));
 
 		this._iterationsFn = this._FnFactory
-			.Build(typeof(IProcessor<GetIterationsCmd, IterationsRes>))
-			.AsAsync();
+			.Build(typeof(IProcessor<GetIterationsCmd, IterationsRes>));
 	}
 
 	public INode Init(
