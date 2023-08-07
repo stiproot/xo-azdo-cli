@@ -1,5 +1,4 @@
-
-namespace AzureDevOpsClient.Providers;
+namespace Xo.AzDO.Cli.Providers;
 
 internal class CloneWiCmdProvider : IProvider<CloneWiCmd>
 {

@@ -7,6 +7,7 @@ class Program
 		// WorkItems();
 		// Folder();
 		// Core.Dashboard();
+
 		Core.QueryByWiql();
 	}
 }
