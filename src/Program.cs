@@ -2,12 +2,12 @@
 
 class Program
 {
-	static void Main(string[] args)
-	{
-		// WorkItems();
-		// Folder();
-		// Core.Dashboard();
+    static void Main(string[] args)
+    {
+        // WorkItems();
+        // Folder();
+        // Core.Dashboard();
 
-		Core.QueryByWiql();
-	}
+        Core.QueryByWiql();
+    }
 }
