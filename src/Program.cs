@@ -7,7 +7,8 @@ class Program
         // WorkItems();
         // Folder();
         // Core.Dashboard();
-
-        Core.QueryByWiql();
+        // Core.QueryByWiql();
+        // Core.CloneWorkItem();
+        Core.Dashboard();
     }
 }
