@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Processors;
+namespace Xo.AzDO.Engine.Processors;
 
-internal class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflowCmd, DashboardWorkflowRes>
+public class DashboardWorkflowProcessorV2 : IProcessor<CreateDashboardWorkflowCmd, DashboardWorkflowRes>
 {
     private readonly INodeBuilderFactory _nodeBuilderFactory;
     private readonly IFnFactory _fnFactory;

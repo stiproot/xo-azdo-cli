@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class WidgetRes : IProcessorRes
+public class WidgetRes : IProcessorRes
 {
 	public Widget Widget { get; init; }
 }

@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using Xo.TaskTree.DependencyInjection.Extensions;
 
-namespace Xo.AzDO.Cli.Extensions;
+namespace Xo.AzDO.Engine.Extensions;
 
-internal static class ServiceCollectionExtensions
+public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddServices(this IServiceCollection @this)
     {

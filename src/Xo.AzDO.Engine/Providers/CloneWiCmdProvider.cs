@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Providers;
+namespace Xo.AzDO.Engine.Providers;
 
-internal class CloneWiCmdProvider : IProvider<CloneWiCmd>
+public class CloneWiCmdProvider : IProvider<CloneWiCmd>
 {
     public CloneWiCmd Provide() => new CloneWiCmd
     {

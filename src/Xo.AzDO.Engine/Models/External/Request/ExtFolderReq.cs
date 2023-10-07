@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Request;
+namespace Xo.AzDO.Engine.Models.External.Request;
 
-internal class ExtFolderReq
+public class ExtFolderReq
 {
 	[JsonProperty("name")]
 	public string Name { get; init; }

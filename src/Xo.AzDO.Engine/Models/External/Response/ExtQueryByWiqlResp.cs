@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Response;
+namespace Xo.AzDO.Engine.Models.External.Response;
 
-internal class ExtQueryByWiqlResp
+public class ExtQueryByWiqlResp
 {
     [JsonProperty("queryType")]
     public string QueryType { get; init; }
@@ -21,7 +21,7 @@ internal class ExtQueryByWiqlResp
     public List<ExtQueryByWiqlWorkItem> WorkItems { get; init; }
 }
 
-internal class ExtQueryByWiqlColumn
+public class ExtQueryByWiqlColumn
 {
     [JsonProperty("referenceName")]
     public string ReferenceName { get; init; }
@@ -33,7 +33,7 @@ internal class ExtQueryByWiqlColumn
     public string Url { get; init; }
 }
 
-internal class ExtQueryByWiqlField
+public class ExtQueryByWiqlField
 {
     [JsonProperty("referenceName")]
     public string ReferenceName { get; init; }
@@ -45,7 +45,7 @@ internal class ExtQueryByWiqlField
     public string Url { get; init; }
 }
 
-internal class ExtQueryByWiqlSortColumn
+public class ExtQueryByWiqlSortColumn
 {
     [JsonProperty("field")]
     public ExtQueryByWiqlField Field { get; init; }
@@ -54,7 +54,7 @@ internal class ExtQueryByWiqlSortColumn
     public bool Descending { get; init; }
 }
 
-internal class ExtQueryByWiqlWorkItem
+public class ExtQueryByWiqlWorkItem
 {
     [JsonProperty("id")]
     public int Id { get; init; }

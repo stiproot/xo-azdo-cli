@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Processors;
+namespace Xo.AzDO.Engine.Processors;
 
-internal class QueryByWiqlProcessor : BaseHttpProcessor, IProcessor<QueryByWiqlCmd, QueryByWiqlRes>
+public class QueryByWiqlProcessor : BaseHttpProcessor, IProcessor<QueryByWiqlCmd, QueryByWiqlRes>
 {
 	private readonly IProcessor<BuildWiqlCmd, WiqlRes> _wiqlProcessor;
 	private const string API_VERSION = "7.0";

@@ -1,7 +1,7 @@
-namespace Xo.AzDO.Cli.Processors;
+namespace Xo.AzDO.Engine.Processors;
 
 // todo: remove?...
-internal class TemplateProcessor : IProcessor<PopulateTemplateCmd, TemplateRes>
+public class TemplateProcessor : IProcessor<PopulateTemplateCmd, TemplateRes>
 {
 	public async Task<TemplateRes> ProcessAsync(PopulateTemplateCmd cmd)
 	{

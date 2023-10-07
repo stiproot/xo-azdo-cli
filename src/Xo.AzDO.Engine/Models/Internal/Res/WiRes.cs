@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class WiRes : IProcessorRes
+public class WiRes : IProcessorRes
 {
 	public CreateWiCmd Cmd { get; init; }
 }

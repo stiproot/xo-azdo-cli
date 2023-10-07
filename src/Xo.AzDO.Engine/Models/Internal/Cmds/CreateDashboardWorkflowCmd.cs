@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class CreateDashboardWorkflowCmd : IProcessorCmd
+public class CreateDashboardWorkflowCmd : IProcessorCmd
 {
 	public string IterationName { get; init; }
 	public string IterationBasePath { get; init; }
@@ -10,7 +10,7 @@ internal class CreateDashboardWorkflowCmd : IProcessorCmd
 	public string QueryFolderBasePath { get; init; }
 }
 
-internal class Initiative
+public class Initiative
 {
 	public string Title { get; init; }
 	public string Desc { get; init; }

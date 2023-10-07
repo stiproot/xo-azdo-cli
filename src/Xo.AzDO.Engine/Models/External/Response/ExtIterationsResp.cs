@@ -1,12 +1,12 @@
-namespace Xo.AzDO.Cli.Models.External.Response;
+namespace Xo.AzDO.Engine.Models.External.Response;
 
-internal class ExtIterationsResp
+public class ExtIterationsResp
 {
 	public int Count { get; init; }
 	public IEnumerable<Iteration> Value { get; init; }
 }
 
-internal class Iteration
+public class Iteration
 {
 	public string Id { get; init; }
 	public string Name { get; init; }
@@ -15,7 +15,7 @@ internal class Iteration
 	public string Url { get; init; }
 }
 
-internal class Attributes
+public class Attributes
 {
 	public string StartDate { get; init; }
 	public string FinishDate { get; init; }

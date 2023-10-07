@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class GetWiCmd : IProcessorCmd
+public class GetWiCmd : IProcessorCmd
 {
 	public int Id { get; init; }
 	public ExtWiResp ExtResp { get; set; }

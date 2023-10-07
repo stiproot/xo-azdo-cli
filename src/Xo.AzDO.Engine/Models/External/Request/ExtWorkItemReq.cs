@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Request;
+namespace Xo.AzDO.Engine.Models.External.Request;
 
-internal sealed class ExtWiReq
+public sealed class ExtWiReq
 {
   public string workitem_type { get; init; }
   public System.Collections.Generic.IEnumerable<System.Object> workitem_payload { get; init; }

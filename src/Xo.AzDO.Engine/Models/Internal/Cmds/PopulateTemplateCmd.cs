@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class PopulateTemplateCmd : IProcessorCmd
+public class PopulateTemplateCmd : IProcessorCmd
 {
 	public string Template { get; init; }
 	public IDictionary<string, string> Values { get; init; }

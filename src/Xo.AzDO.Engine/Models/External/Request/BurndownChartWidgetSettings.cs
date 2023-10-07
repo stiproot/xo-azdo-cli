@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Request;
+namespace Xo.AzDO.Engine.Models.External.Request;
 
-internal class BurndownChartWidgetSettings
+public class BurndownChartWidgetSettings
 {
 	[JsonProperty("totalScopeTrendlineEnabled")]
 	public bool TotalScopeTrendlineEnabled { get; init; } = true;
@@ -42,7 +42,7 @@ internal class BurndownChartWidgetSettings
 	public bool IsLegacy { get; init; } = false;
 }
 
-internal class Aggregation
+public class Aggregation
 {
 	[JsonProperty("identifier")]
 	public int Identifier { get; init; } = 1;
@@ -51,7 +51,7 @@ internal class Aggregation
 	public string Settings { get; init; } = "Microsoft.VSTS.Scheduling.RemainingWork";
 }
 
-internal class WorkItemTypeFilter
+public class WorkItemTypeFilter
 {
 	[JsonProperty("identifier")]
 	public string Identifier { get; init; } = "BacklogCategory";
@@ -60,7 +60,7 @@ internal class WorkItemTypeFilter
 	public string Settings { get; init; } = "Microsoft.TaskCategory";
 }
 
-internal class TimePeriodConfiguration
+public class TimePeriodConfiguration
 {
 	[JsonProperty("startDate")]
 	public string StartDate { get; init; } = DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd");
@@ -69,7 +69,7 @@ internal class TimePeriodConfiguration
 	public string EndDate { get; init; } = DateTime.Today.ToString("yyyy-MM-dd");
 }
 
-internal class Team
+public class Team
 {
 	[JsonProperty("teamId")]
 	public string TeamId { get; init; }

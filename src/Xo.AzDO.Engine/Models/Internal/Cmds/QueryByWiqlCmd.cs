@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class QueryByWiqlCmd : IProcessorCmd
+public class QueryByWiqlCmd : IProcessorCmd
 {
 	public string? Query { get; init; } 
 	public BuildWiqlCmd? BuildWiqlCmd { get; init; }

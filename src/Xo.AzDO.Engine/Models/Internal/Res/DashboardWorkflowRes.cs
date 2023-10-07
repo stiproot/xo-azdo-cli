@@ -1,5 +1,5 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class DashboardWorkflowRes : IProcessorRes
+public class DashboardWorkflowRes : IProcessorRes
 {
 }

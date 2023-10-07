@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Response;
+namespace Xo.AzDO.Engine.Models.External.Response;
 
-internal sealed class ExtQueryResp
+public sealed class ExtQueryResp
 {
 	[JsonProperty("id")]
 	public string Id { get; init; }
@@ -66,7 +66,7 @@ public class User
 	public string Descriptor { get; init; }
 }
 
-internal sealed class Links
+public sealed class Links
 {
 	[JsonProperty("self")]
 	public Link Self { get; init; }

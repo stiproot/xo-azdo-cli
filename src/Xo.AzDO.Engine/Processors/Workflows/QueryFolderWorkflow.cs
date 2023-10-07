@@ -1,4 +1,4 @@
-internal class QueryFolderWorkflow : BaseWorkflow, IWorkflow<CreateFolderCmd>
+public class QueryFolderWorkflow : BaseWorkflow, IWorkflow<CreateFolderCmd>
 {
     private readonly IProcessor<CreateFolderCmd, FolderRes> _processor;
 

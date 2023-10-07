@@ -1,6 +1,6 @@
-﻿namespace Xo.AzDO.Cli.Abstractions;
+﻿namespace Xo.AzDO.Engine.Abstractions;
 
-internal interface ITypeSerializer
+public interface ITypeSerializer
 {
 	string Serialize<T>(T type);
 	T Deserialize<T>(string json);

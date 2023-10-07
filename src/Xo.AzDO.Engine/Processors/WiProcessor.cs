@@ -1,6 +1,6 @@
-﻿namespace Xo.AzDO.Cli.Processors;
+﻿namespace Xo.AzDO.Engine.Processors;
 
-internal class WiProcessor : BaseHttpProcessor, IProcessor<CreateWiCmd, WiRes>
+public class WiProcessor : BaseHttpProcessor, IProcessor<CreateWiCmd, WiRes>
 {
 	private readonly IMapper<CreateWiCmd, ExtWiReq> _extReqMapper;
 	const string API_VERSION = "7.0";

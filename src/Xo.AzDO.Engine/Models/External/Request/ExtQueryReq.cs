@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Request;
+namespace Xo.AzDO.Engine.Models.External.Request;
 
-internal class ExtQueryReq
+public class ExtQueryReq
 {
 	[JsonProperty("name")]
 	public string Name { get; init; }

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class IterationDetailsRes : IProcessorRes
+public class IterationDetailsRes : IProcessorRes
 {
 	public ExtIterationDetailsResp ExtResp { get; init; }
 }

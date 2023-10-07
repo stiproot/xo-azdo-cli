@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class QueryByWiqlRes : IProcessorRes
+public class QueryByWiqlRes : IProcessorRes
 {
 	public ExtQueryByWiqlResp ExtResp { get; init; }
 }

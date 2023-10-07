@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class Pat
+public class Pat
 {
 	public string Token { get; init; }
 	public string Base64EncodedToken { get; init; }

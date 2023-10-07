@@ -1,4 +1,4 @@
-﻿namespace Xo.AzDO.Cli;
+﻿namespace Xo.AzDO.Engine.Console;
 
 class Program
 {

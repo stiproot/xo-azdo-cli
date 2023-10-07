@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Request;
+namespace Xo.AzDO.Engine.Models.External.Request;
 
-internal class BaseWidgetBuilder : IWidgetBuilder
+public class BaseWidgetBuilder : IWidgetBuilder
 {
 	protected readonly Widget _Widget;
 

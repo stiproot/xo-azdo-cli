@@ -1,4 +1,4 @@
-internal class WitChartWidgetSettings
+public class WitChartWidgetSettings
 {
 	[JsonProperty("chartType")]
 	public string ChartType { get; init; } = "stackBarChart";
@@ -28,7 +28,7 @@ internal class WitChartWidgetSettings
 	public string LastArtifactName { get; init; }
 }
 
-internal class TransformOptions
+public class TransformOptions
 {
 	[JsonProperty("filter")]
 	public string Filter { get; init; }
@@ -55,7 +55,7 @@ internal class TransformOptions
 	public List<object> FilteredGroups { get; init; } = new List<object>();
 }
 
-internal class OrderBy
+public class OrderBy
 {
 	[JsonProperty("propertyName")]
 	public string PropertyName { get; init; } = "label";
@@ -64,7 +64,7 @@ internal class OrderBy
 	public string Direction { get; init; } = "descending";
 }
 
-internal class Measure
+public class Measure
 {
 	[JsonProperty("aggregation")]
 	public string Aggregation { get; init; } = "count";
@@ -73,7 +73,7 @@ internal class Measure
 	public string PropertyName { get; init; } = string.Empty;
 }
 
-internal class UserColor
+public class UserColor
 {
 	[JsonProperty("value")]
 	public string Value { get; init; }

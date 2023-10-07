@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class GetWidgetTypesCmd : IProcessorCmd
+public class GetWidgetTypesCmd : IProcessorCmd
 {
 	// public str
 }

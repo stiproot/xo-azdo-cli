@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Abstractions;
+namespace Xo.AzDO.Engine.Abstractions;
 
-internal interface IProcessor<TIn, TOut>
+public interface IProcessor<TIn, TOut>
 	where TIn : IProcessorCmd
 	where TOut : IProcessorRes
 {

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class TemplateRes : IProcessorRes
+public class TemplateRes : IProcessorRes
 {
 	public string Template { get; init; }
 }

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Processors;
+namespace Xo.AzDO.Engine.Processors;
 
-internal class CreateFolderProcessor : BaseHttpProcessor, IProcessor<CreateFolderCmd, FolderRes>
+public class CreateFolderProcessor : BaseHttpProcessor, IProcessor<CreateFolderCmd, FolderRes>
 {
 	private const string API_VERSION = "7.0";
 

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Request;
+namespace Xo.AzDO.Engine.Models.External.Request;
 
-internal class ExtQueryByWiqlReq
+public class ExtQueryByWiqlReq
 {
 	[JsonProperty("query")]
 	public string Query { get; init; }

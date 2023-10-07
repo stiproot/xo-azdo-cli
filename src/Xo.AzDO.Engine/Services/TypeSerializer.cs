@@ -1,6 +1,6 @@
-﻿namespace Xo.AzDO.Cli.Services;
+﻿namespace Xo.AzDO.Engine.Services;
 
-internal class TypeSerializer : ITypeSerializer
+public class TypeSerializer : ITypeSerializer
 {
 	public string Serialize<T>(T type) => JsonConvert.SerializeObject(type);
 	public T Deserialize<T>(string json) => JsonConvert.DeserializeObject<T>(json);

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Processors;
+namespace Xo.AzDO.Engine.Processors;
 
-internal class DashboardProcessor : BaseHttpProcessor, IProcessor<CreateDashboardCmd, DashboardRes>
+public class DashboardProcessor : BaseHttpProcessor, IProcessor<CreateDashboardCmd, DashboardRes>
 {
     public DashboardProcessor(
         IHttpClientFactory httpClientFactory,

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Abstractions;
+namespace Xo.AzDO.Engine.Abstractions;
 
-internal interface IDashboardsTemplatesProvider
+public interface IDashboardsTemplatesProvider
 {
 	string GetTemplateContent(DashboardTemplates template);
 }

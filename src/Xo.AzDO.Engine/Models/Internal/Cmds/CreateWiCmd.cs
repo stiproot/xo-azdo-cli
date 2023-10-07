@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class CreateWiCmd : IProcessorCmd
+public class CreateWiCmd : IProcessorCmd
 {
 	public string type { get; init; }
 	public string title { get; init; }
@@ -19,7 +19,7 @@ internal class CreateWiCmd : IProcessorCmd
 	public ExtWiResp ExtResp { get; set; }
 }
 
-internal class WorkItemRelation
+public class WorkItemRelation
 {
 	public object attributes { get; init; }
 	public string relation_type { get; init; }

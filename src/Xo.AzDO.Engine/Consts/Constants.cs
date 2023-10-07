@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli;
+namespace Xo.AzDO.Engine;
 
-internal enum DashboardTemplates
+public enum DashboardTemplates
 {
 	CREATE_NEW_DASHBOARD_REQ,
 	CREATE_NEW_FOLDER_REQ,

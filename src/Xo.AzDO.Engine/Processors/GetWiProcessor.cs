@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Processors;
+namespace Xo.AzDO.Engine.Processors;
 
-internal class GetWiProcessor : BaseHttpProcessor, IProcessor<GetWiCmd, GetWiRes>
+public class GetWiProcessor : BaseHttpProcessor, IProcessor<GetWiCmd, GetWiRes>
 {
     const string API_VERSION = "7.0";
 

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Processors;
+namespace Xo.AzDO.Engine.Processors;
 
-internal class CloneWiProcessor : BaseHttpProcessor, IProcessor<CloneWiCmd, CloneWiRes>
+public class CloneWiProcessor : BaseHttpProcessor, IProcessor<CloneWiCmd, CloneWiRes>
 {
     private const string API_VERSION = "7.0";
 

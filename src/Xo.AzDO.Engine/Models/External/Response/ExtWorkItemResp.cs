@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Response;
+namespace Xo.AzDO.Engine.Models.External.Response;
 
-internal sealed class ExtWiResp
+public sealed class ExtWiResp
 {
   public ReferenceLinks _links { get; init; }
   public WorkItemCommentVersionRef commentVersionRef { get; init; }
@@ -11,7 +11,7 @@ internal sealed class ExtWiResp
   public string url { get; init; }
 }
 
-internal sealed class WorkItemCommentVersionRef
+public sealed class WorkItemCommentVersionRef
 {
   public int commentId { get; init; }
   public int createdInRevision { get; init; }
@@ -21,12 +21,12 @@ internal sealed class WorkItemCommentVersionRef
   public int version { get; init; }
 }
 
-internal sealed class ReferenceLinks
+public sealed class ReferenceLinks
 {
   public object links { get; init; }
 }
 
-internal sealed class WorkItemRelation
+public sealed class WorkItemRelation
 {
   public object attributes { get; init; }
   public string relation_type { get; init; }

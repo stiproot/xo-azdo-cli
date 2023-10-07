@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Request;
+namespace Xo.AzDO.Engine.Models.External.Request;
 
-internal class ExtDashboardReq
+public class ExtDashboardReq
 {
 	public string Name { get; init; }
 	public IEnumerable<Widget> Widgets { get; init; }

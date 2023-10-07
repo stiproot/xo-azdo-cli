@@ -1,4 +1,4 @@
-internal abstract class BaseWorkflow
+public abstract class BaseWorkflow
 {
 	protected readonly INodeBuilderFactory _NodeBuilderFactory;
 	protected readonly IFnFactory _FnFactory;

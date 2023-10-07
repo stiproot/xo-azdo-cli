@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Providers;
+namespace Xo.AzDO.Engine.Providers;
 
-internal class QueryByWiqlCmdProvider : IProvider<QueryByWiqlCmd>
+public class QueryByWiqlCmdProvider : IProvider<QueryByWiqlCmd>
 {
     public QueryByWiqlCmd Provide() => new QueryByWiqlCmd
     {

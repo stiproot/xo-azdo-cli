@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Abstractions;
+namespace Xo.AzDO.Engine.Abstractions;
 
-internal interface IMapper<in TSource, out TTarget> where TTarget : new()
+public interface IMapper<in TSource, out TTarget> where TTarget : new()
 {
 	TTarget Map(TSource source);
 }

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class QueryCmd : IProcessorCmd
+public class QueryCmd : IProcessorCmd
 {
 	public string QueryFolderName { get; init; }
 	public string QueryFolderPath { get; init; }

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class CreateFolderCmd : IProcessorCmd
+public class CreateFolderCmd : IProcessorCmd
 {
 	public string FolderName { get; init; }
 	public string QueryFolderPath { get; init; }

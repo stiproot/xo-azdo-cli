@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class WiqlRes : IProcessorRes
+public class WiqlRes : IProcessorRes
 {
 	public string WiQuery { get; init; }
 }

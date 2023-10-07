@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class BuildWiqlCmd : IProcessorCmd
+public class BuildWiqlCmd : IProcessorCmd
 {
 	public IEnumerable<string> Columns { get; init; }
 	public string Table { get; init; } = "WorkItems";

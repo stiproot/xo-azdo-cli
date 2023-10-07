@@ -1,8 +1,8 @@
 ﻿using System.Text;
 
-namespace Xo.AzDO.Cli;
+namespace Xo.AzDO.Engine;
 
-internal static class HttpRequestMessageFactory
+public static class HttpRequestMessageFactory
 {
 	public static HttpRequestMessage Create(
 		Uri url,

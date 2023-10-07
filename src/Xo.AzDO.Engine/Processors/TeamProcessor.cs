@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Processors;
+namespace Xo.AzDO.Engine.Processors;
 
-internal class TeamProcessor : BaseHttpProcessor, IProcessor<GetTeamDetailsCmd, TeamRes>
+public class TeamProcessor : BaseHttpProcessor, IProcessor<GetTeamDetailsCmd, TeamRes>
 {
     private const string API_VERSION = "7.0";
 

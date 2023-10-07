@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class QueryScalarWidgetSettings
+public class QueryScalarWidgetSettings
 {
 	[JsonProperty("defaultBackgroundColor")]
 	public string DefaultBackgroundColor { get; init; } = "#00643a";

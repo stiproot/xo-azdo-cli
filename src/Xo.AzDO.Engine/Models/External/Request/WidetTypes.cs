@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Abstractions;
+namespace Xo.AzDO.Engine.Abstractions;
 
-internal enum WidgetTypes
+public enum WidgetTypes
 {
 	MarkdownWidget,
 	SprintCapacityWidget,

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Processors;
+namespace Xo.AzDO.Engine.Processors;
 
-internal class WiqlProcessor : IProcessor<BuildWiqlCmd, WiqlRes>
+public class WiqlProcessor : IProcessor<BuildWiqlCmd, WiqlRes>
 {
 	public async Task<WiqlRes> ProcessAsync(BuildWiqlCmd cmd) => new WiqlRes { WiQuery = this.BuildQry(cmd) };
 
@@ -22,7 +22,7 @@ internal class WiqlProcessor : IProcessor<BuildWiqlCmd, WiqlRes>
 	}
 }
 
-internal class QryCondition
+public class QryCondition
 {
 	public string Column { get; init; }
 	public string Operator { get; init; } = "=";

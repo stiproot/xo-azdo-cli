@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class GetIterationDetailsCmd : IProcessorCmd
+public class GetIterationDetailsCmd : IProcessorCmd
 {
 	public string IterationId { get; init; }
 }

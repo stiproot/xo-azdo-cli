@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal sealed class Config
+public sealed class Config
 {
 	public string Pat { get; init; }
 }

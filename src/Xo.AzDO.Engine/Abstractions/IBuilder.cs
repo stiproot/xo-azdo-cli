@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Abstractions;
+namespace Xo.AzDO.Engine.Abstractions;
 
-internal interface IBuilder<out TOut, TIn>
+public interface IBuilder<out TOut, TIn>
 {
 	TOut Build(ref TIn input);
 }

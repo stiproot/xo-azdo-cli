@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Providers;
+namespace Xo.AzDO.Engine.Providers;
 
-internal class PatProvider : IProvider<Pat>
+public class PatProvider : IProvider<Pat>
 {
     private readonly Config _config;
 

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class BuildWidgetCmd : IProcessorCmd
+public class BuildWidgetCmd : IProcessorCmd
 {
 	public string Name { get; init; }
 	public int RowSpan { get; init; }

@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Abstractions;
+namespace Xo.AzDO.Engine.Abstractions;
 
-internal interface IProvider<T>
+public interface IProvider<T>
 {
 	T Provide();
 }

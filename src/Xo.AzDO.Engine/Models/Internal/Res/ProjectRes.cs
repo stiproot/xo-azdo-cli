@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class ProjectRes : IProcessorRes
+public class ProjectRes : IProcessorRes
 {
 	public ExtProjectResp ExtResp { get; init; }
 }

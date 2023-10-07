@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Request;
+namespace Xo.AzDO.Engine.Models.External.Request;
 
-internal class Widget
+public class Widget
 {
 	// public string id { get; set; }
 	public string name { get; set; }
@@ -40,19 +40,19 @@ internal class Widget
 	}
 }
 
-internal class Size
+public class Size
 {
 	public int rowSpan { get; init; }
 	public int columnSpan { get; init; }
 }
 
-internal class Position
+public class Position
 {
 	public int row { get; init; }
 	public int column { get; init; }
 }
 
-internal class SettingsVersion
+public class SettingsVersion
 {
 	public int major { get; init; } = 1;
 	public int minor { get; init; } = 0;

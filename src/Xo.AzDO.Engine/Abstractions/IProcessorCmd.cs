@@ -1,5 +1,5 @@
-namespace Xo.AzDO.Cli.Abstractions;
+namespace Xo.AzDO.Engine.Abstractions;
 
-internal interface IProcessorCmd
+public interface IProcessorCmd
 {
 }

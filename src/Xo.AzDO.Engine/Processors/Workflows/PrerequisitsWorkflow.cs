@@ -1,4 +1,4 @@
-internal class PrerequisitsWorkflow : BaseWorkflow, IWorkflow<CreateDashboardWorkflowCmd>
+public class PrerequisitsWorkflow : BaseWorkflow, IWorkflow<CreateDashboardWorkflowCmd>
 {
     private readonly IFn _teamDetailsFn;
     private readonly IFn _iterationsFn;

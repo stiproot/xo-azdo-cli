@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Abstractions;
+namespace Xo.AzDO.Engine.Abstractions;
 
-internal interface IWidgetBuilderFactory
+public interface IWidgetBuilderFactory
 {
 	IWidgetBuilder Create(
 		WidgetTypes type,

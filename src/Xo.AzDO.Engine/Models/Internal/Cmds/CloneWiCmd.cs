@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class CloneWiCmd : IProcessorCmd
+public class CloneWiCmd : IProcessorCmd
 {
 	public int Id { get; init; } = 0;
 	public int ParentId { get; init; } = 0;

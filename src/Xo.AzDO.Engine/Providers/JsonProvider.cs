@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Providers;
+namespace Xo.AzDO.Engine.Providers;
 
-internal class JsonProvider : IJsonProvider
+public class JsonProvider : IJsonProvider
 {
     private string PathToFile(string fileName)
     {

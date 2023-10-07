@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class DashboardRes : IProcessorRes
+public class DashboardRes : IProcessorRes
 {
 	public ExtDashboardResp ExtResp { get; init; }
 }

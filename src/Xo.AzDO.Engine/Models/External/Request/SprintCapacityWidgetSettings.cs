@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class SprintCapacityWidgetSettings
+public class SprintCapacityWidgetSettings
 {
 	[JsonProperty("teamId")]
 	public string TeamId { get; init; }

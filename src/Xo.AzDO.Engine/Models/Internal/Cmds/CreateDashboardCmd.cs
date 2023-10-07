@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class CreateDashboardCmd : IProcessorCmd
+public class CreateDashboardCmd : IProcessorCmd
 {
 	public ExtDashboardReq Req { get; init; }
 	public string TeamName { get; init; }

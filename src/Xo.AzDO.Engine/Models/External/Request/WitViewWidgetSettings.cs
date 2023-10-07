@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models;
+namespace Xo.AzDO.Engine.Models;
 
-internal class WitViewWidgetSettings
+public class WitViewWidgetSettings
 {
 	[JsonProperty("query")]
 	public Query Query { get; init; }
@@ -14,7 +14,7 @@ internal class WitViewWidgetSettings
 	};
 }
 
-internal class Query
+public class Query
 {
 	[JsonProperty("queryId")]
 	public string QueryId { get; init; }
@@ -23,7 +23,7 @@ internal class Query
 	public string QueryName { get; init; }
 }
 
-internal class Column
+public class Column
 {
 	[JsonProperty("name")]
 	public string Name { get; init; }

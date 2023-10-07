@@ -1,6 +1,6 @@
-namespace Xo.AzDO;
+namespace Xo.AzDO.Engine.Console;
 
-internal static class Core
+public static class Core
 {
     public static void WorkItems()
     {
@@ -48,6 +48,6 @@ internal static class Core
         var workflow = provider.GetServiceType<IWorkflow<CreateFolderCmd>>();
         var msg = workflow.Init(context, cmd).Resolve(cancellationToken).Result;
 
-        Console.WriteLine(msg);
+        System.Console.WriteLine(msg);
     }
 }

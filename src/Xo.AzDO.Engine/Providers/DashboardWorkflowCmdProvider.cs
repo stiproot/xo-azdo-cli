@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Providers;
+namespace Xo.AzDO.Engine.Providers;
 
-internal class DashboardWorkflowCmdProvider : IProvider<CreateDashboardWorkflowCmd>
+public class DashboardWorkflowCmdProvider : IProvider<CreateDashboardWorkflowCmd>
 {
     public CreateDashboardWorkflowCmd Provide() => new CreateDashboardWorkflowCmd
     {

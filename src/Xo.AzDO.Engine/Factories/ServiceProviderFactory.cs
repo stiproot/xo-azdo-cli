@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Xo.AzDO.Cli.Factories;
+namespace Xo.AzDO.Engine.Factories;
 
-internal static class ServiceProviderFactory
+public static class ServiceProviderFactory
 {
 	public static IServiceProvider Create()
 		=> ServiceCollectionFactory
@@ -11,7 +11,7 @@ internal static class ServiceProviderFactory
 				.BuildServiceProvider();
 }
 
-internal static class ServiceCollectionFactory
+public static class ServiceCollectionFactory
 {
 	public static IServiceCollection Create() => new ServiceCollection();
 }

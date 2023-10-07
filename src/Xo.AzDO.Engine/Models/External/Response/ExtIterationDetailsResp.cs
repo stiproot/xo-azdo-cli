@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Response;
+namespace Xo.AzDO.Engine.Models.External.Response;
 
-internal class ExtIterationDetailsResp
+public class ExtIterationDetailsResp
 {
 	public string Id { get; init; }
 	public string Name { get; init; }

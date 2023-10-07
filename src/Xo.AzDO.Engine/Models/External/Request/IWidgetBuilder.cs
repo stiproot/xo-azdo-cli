@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Models.External.Request;
+namespace Xo.AzDO.Engine.Models.External.Request;
 
-internal interface IWidgetBuilder
+public interface IWidgetBuilder
 {
 	IWidgetBuilder AddName(string name);
 	IWidgetBuilder AddDimensions((int y, int x, int h, int w) dimensions);

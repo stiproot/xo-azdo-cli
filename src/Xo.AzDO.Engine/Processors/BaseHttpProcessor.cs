@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Processors;
+namespace Xo.AzDO.Engine.Processors;
 
-internal abstract class BaseHttpProcessor
+public abstract class BaseHttpProcessor
 {
 	protected readonly IHttpClientFactory _HttpClientFactory;
 	protected readonly ITypeSerializer _TypeSerializer;

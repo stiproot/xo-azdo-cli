@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xo.AzDO.Engine", "Xo.AzDO.Engine\Xo.AzDO.Engine.csproj", "{02BC9782-A9E7-4AE6-B62E-584CAD064E83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xo.AzDO.Engine.Console", "Xo.AzDO.Engine.Console\Xo.AzDO.Engine.Console.csproj", "{D101613A-80C9-49D7-94C6-7CA85CA1CFF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02BC9782-A9E7-4AE6-B62E-584CAD064E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02BC9782-A9E7-4AE6-B62E-584CAD064E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02BC9782-A9E7-4AE6-B62E-584CAD064E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02BC9782-A9E7-4AE6-B62E-584CAD064E83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D101613A-80C9-49D7-94C6-7CA85CA1CFF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D101613A-80C9-49D7-94C6-7CA85CA1CFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D101613A-80C9-49D7-94C6-7CA85CA1CFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D101613A-80C9-49D7-94C6-7CA85CA1CFF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

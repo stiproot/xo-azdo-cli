@@ -1,6 +1,6 @@
-namespace Xo.AzDO.Cli.Providers;
+namespace Xo.AzDO.Engine.Providers;
 
-internal class CreateWiCmdProvider : IProvider<IEnumerable<CreateWiCmd>>
+public class CreateWiCmdProvider : IProvider<IEnumerable<CreateWiCmd>>
 {
     private readonly IJsonProvider _jsonProvider;
 
