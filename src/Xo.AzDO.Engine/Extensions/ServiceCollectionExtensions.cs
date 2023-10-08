@@ -68,6 +68,10 @@ public static class ServiceCollectionExtensions
         @this.AddHttpClient("AzureHttpClient", client =>
         {
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64);
+        })
+        .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+        {
+            ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
         });
 
         return @this;
