@@ -7,7 +7,6 @@ public class CloneWiProcessor : BaseHttpProcessor, IProcessor<CloneWiCmd, CloneW
     private readonly IProcessor<GetWiCmd, GetWiRes> _getWiProcessor;
     private readonly IProcessor<CreateWiCmd, WiRes> _createWiProcessor;
     private CloneWiCmd? RootCmd;
-    private string IterationPath() => $"{RootCmd!.IterationBasePath}\\{RootCmd!.IterationName}";
 
     public CloneWiProcessor(
         IHttpClientFactory httpClientFactory,
@@ -75,7 +74,7 @@ public class CloneWiProcessor : BaseHttpProcessor, IProcessor<CloneWiCmd, CloneW
             title = extResp.fields["System.Title"].ToString()!,
             description = SafeGet(extResp.fields, "System.Description")?.ToString() ?? string.Empty,
             area_path = this.RootCmd!.AreaPath,
-            iteration_path = IterationPath(),
+            iteration_path = this.RootCmd!.IterationPath,
             children = children,
             tags = BuildTags(extResp.fields),
         };
