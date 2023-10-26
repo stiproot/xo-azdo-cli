@@ -16,7 +16,6 @@ public class Initiative
 	public string Desc { get; init; }
 	public string Tag { get; init; }
 	public IDictionary<string, string> Links { get; init; } = new Dictionary<string, string>();
-	public string QueryFolderName { get; init; }
 	public string Markdown =>
 		$"#{this.Title}\n" +
 		$"{this.Desc}\n" +
