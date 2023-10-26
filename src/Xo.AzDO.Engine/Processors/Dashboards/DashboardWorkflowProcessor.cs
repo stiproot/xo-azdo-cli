@@ -169,7 +169,7 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                 this._typeSerializer.Serialize(new BurndownChartWidgetSettings()
                 {
                     Team = new Team { TeamId = teamDetails.Id, ProjectId = teamDetails.ProjectId },
-                    IterationPath = $"{cmd.IterationBasePath}\\{cmd.IterationName}",
+                    IterationPath = cmd.IterationPath,
                     TimePeriodConfiguration = new TimePeriodConfiguration { StartDate = FormatDate(iteration.Attributes.StartDate), EndDate = FormatDate(iteration.Attributes.FinishDate) }
                 })
             )
@@ -204,7 +204,7 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                             new QryCondition{Column = "[System.ChangedDate]", Operator = "<", Condition = "@startOfDay('-7d')"},
                             new QryCondition{Column = "[System.State]", Condition = "'Active'"},
                             new QryCondition{Column = "[Microsoft.VSTS.Scheduling.RemainingWork]", Operator = ">", Condition = "0"},
-                            new QryCondition{Column = "[System.IterationPath]", Condition = $"'{cmd.IterationBasePath}\\{cmd.IterationName}'"},
+                            new QryCondition{Column = "[System.IterationPath]", Condition = $"'{cmd.IterationPath}'"},
                         }
                     }
                 },
@@ -248,7 +248,7 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                             new QryCondition{Column = "[System.ChangedDate]", Operator = "<", Condition = "@startOfDay('-1d')"},
                             new QryCondition{Column = "[System.State]", Condition = "'Active'"},
                             new QryCondition{Column = "[Microsoft.VSTS.Scheduling.RemainingWork]", Operator = ">", Condition = "0"},
-                            new QryCondition{Column = "[System.IterationPath]", Condition = $"'{cmd.IterationBasePath}\\{cmd.IterationName}'"},
+                            new QryCondition{Column = "[System.IterationPath]", Condition = $"'{cmd.IterationPath}'"},
                         }
                     }
                 },
@@ -303,7 +303,7 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                             new QryCondition{Column = "[System.WorkItemType]", Operator = "<>", Condition = "''"},
                             new QryCondition{Column = "[System.State]", Operator = "<>", Condition = "''"},
                             new QryCondition{Column = "[System.State]", Condition = $"'{s}'"},
-                            new QryCondition{Column = "[System.IterationPath]", Condition = $"'{cmd.IterationBasePath}\\{cmd.IterationName}'"},
+                            new QryCondition{Column = "[System.IterationPath]", Condition = $"'{cmd.IterationPath}'"},
                             new QryCondition{Column = "[System.Tags]", Operator = "CONTAINS", Condition = $"'{initiative.Tag}'"},
                         }
                     }
@@ -346,7 +346,7 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                                 new QryCondition{Column = "[System.TeamProject]", Condition = "@project"},
                                 new QryCondition{Column = "[System.WorkItemType]", Operator = "<>", Condition = "''"},
                                 new QryCondition{Column = "[System.State]", Operator = "<>", Condition = "''"},
-                                new QryCondition{Column = "[System.IterationPath]", Condition = $"'{cmd.IterationBasePath}\\{cmd.IterationName}'"},
+                                new QryCondition{Column = "[System.IterationPath]", Condition = $"'{cmd.IterationPath}'"},
                                 new QryCondition{Column = "[System.Tags]", Operator = "CONTAINS", Condition = $"'{initiative.Tag}'"},
                             }
                         }
@@ -400,7 +400,7 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                             {
                                 new QryCondition{Column = "[Source].[System.TeamProject]", Condition = "'Software'", GroupingKey = 1},
                                 new QryCondition{Column = "[Source].[System.WorkItemType]", Operator = "<>", Condition = "''", GroupingKey = 1},
-                                new QryCondition{Column = "[Source].[System.IterationPath]", Condition = $"'{cmd.IterationBasePath}\\{cmd.IterationName}'", GroupingKey = 1},
+                                new QryCondition{Column = "[Source].[System.IterationPath]", Condition = $"'{cmd.IterationPath}'", GroupingKey = 1},
                                 new QryCondition{Column = "[Source].[System.Tags]", Operator = "CONTAINS", Condition = $"'{initiative.Tag}'", GroupingKey = 1},
                                 new QryCondition{Column = "[Source].[Microsoft.VSTS.Scheduling.StoryPoints]", Operator = ">", Condition = "0", GroupingKey = 1},
                                 new QryCondition{Column = "[System.Links.LinkType]", Condition = "'System.LinkTypes.Hierarchy-Forward'", GroupingKey = 2},
@@ -459,7 +459,7 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                                 new QryCondition{Column = "[System.TeamProject]", Condition = "@project"},
                                 new QryCondition{Column = "[System.WorkItemType]", Condition = "'Impediment'"},
                                 new QryCondition{Column = "[System.State]", Operator = "<>", Condition = "''"},
-                                new QryCondition{Column = "[System.IterationPath]", Condition = $"'{cmd.IterationBasePath}\\{cmd.IterationName}'"},
+                                new QryCondition{Column = "[System.IterationPath]", Condition = $"'{cmd.IterationPath}'"},
                                 new QryCondition{Column = "[System.Tags]", Operator = "CONTAINS", Condition = $"'{initiative.Tag}'"},
                             }
                         }

@@ -13,10 +13,12 @@ public class TeamProcessor : BaseHttpProcessor, IProcessor<GetTeamDetailsCmd, Te
     {
         Console.WriteLine($"TeamProcessor: starting");
 
-        var url = new Uri($"{BASE_URL}/_apis/projects/{cmd.ProjectId}/teams/{cmd.TeamId}?api-version={this._ApiVersion}");
-        var req = HttpRequestMessageFactory.Create(url);
+        string url = $"{BASE_URL}/_apis/projects/{cmd.ProjectId}/teams/{cmd.TeamId}?api-version={this._ApiVersion}";
+        var uri = new Uri(url);
+        var req = HttpRequestMessageFactory.Create(uri);
 
         using var httpClient = this.CreateHttpClient();
+
         var resp = await httpClient.SendAsync(req);
         resp.EnsureSuccessStatusCode();
         var respContent = await resp.Content.ReadAsStringAsync();
