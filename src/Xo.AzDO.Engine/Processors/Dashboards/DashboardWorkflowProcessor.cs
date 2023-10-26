@@ -185,7 +185,6 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                 {
                     QueryFolderPath = cmd.QueryFolderBasePath,
                     QueryName = $"{cmd.IterationName}-TasksNotUpdated-7d-Qry",
-                    QueryFolderName = cmd.IterationName,
                     BuildWiqlCmd = new BuildWiqlCmd
                     {
                         Columns = new List<string>
@@ -230,7 +229,6 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                 {
                     QueryFolderPath = cmd.QueryFolderBasePath,
                     QueryName = $"{cmd.IterationName}-TasksNotUpdated-1d-Qry",
-                    QueryFolderName = cmd.IterationName,
                     BuildWiqlCmd = new BuildWiqlCmd
                     {
                         Columns = new List<string>
@@ -287,7 +285,6 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                 {
                     QueryFolderPath = cmd.QueryFolderBasePath,
                     QueryName = $"{cmd.IterationName}-Status ({s})-{initiative.Tag}-Qry",
-                    QueryFolderName = initiative.QueryFolderName,
                     BuildWiqlCmd = new BuildWiqlCmd
                     {
                         Columns = new List<string>
@@ -332,7 +329,6 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                     {
                         QueryFolderPath = cmd.QueryFolderBasePath,
                         QueryName = $"{cmd.IterationName}-Team-Chart-{initiative.Tag}-Qry",
-                        QueryFolderName = initiative.QueryFolderName,
                         BuildWiqlCmd = new BuildWiqlCmd
                         {
                             Columns = new List<string>
@@ -387,7 +383,6 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                     {
                         QueryFolderPath = cmd.QueryFolderBasePath,
                         QueryName = $"{cmd.IterationName}-View-{initiative.Tag}-Qry",
-                        QueryFolderName = initiative.QueryFolderName,
                         BuildWiqlCmd = new BuildWiqlCmd
                         {
                             Mode = "Recursive",
@@ -447,7 +442,6 @@ public class DashboardWorkflowProcessor : IProcessor<CreateDashboardWorkflowCmd,
                     {
                         QueryFolderPath = cmd.QueryFolderBasePath,
                         QueryName = $"{cmd.IterationName}-Impediments-{initiative.Tag}-Qry",
-                        QueryFolderName = initiative.QueryFolderName,
                         BuildWiqlCmd = new BuildWiqlCmd
                         {
                             Columns = new List<string>

@@ -22,14 +22,16 @@ public class QueryProcessor : BaseHttpProcessor, IProcessor<QueryCmd, QueryRes>
     {
         try
         {
-            var url = new Uri($"{BASE_URL}/{PROJECT_NAME}/_apis/wit/queries/{cmd.QueryFolderPath}/{cmd.QueryFolderName}?api-version={this._ApiVersion}");
+            string url = $"{BASE_URL}/{PROJECT_NAME}/_apis/wit/queries/{cmd.QueryFolderPath}?api-version={this._ApiVersion}";
+            var uri = new Uri(url);
             var wiq = this._wiqlProcessor.ProcessAsync(cmd.BuildWiqlCmd).Result;
+
             var reqContent = this._TypeSerializer.Serialize(new ExtQueryReq
             {
                 Wiql = wiq.WiQuery,
                 Name = cmd.QueryName
             });
-            var req = HttpRequestMessageFactory.Create(url, reqContent, HttpMethod.Post);
+            var req = HttpRequestMessageFactory.Create(uri, reqContent, HttpMethod.Post);
 
             using var httpClient = this.CreateHttpClient();
             var resp = await httpClient.SendAsync(req);
