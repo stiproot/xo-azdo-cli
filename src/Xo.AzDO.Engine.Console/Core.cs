@@ -2,6 +2,15 @@ namespace Xo.AzDO.Engine.Console;
 
 public static class Core
 {
+    public static void CreateQuery()
+    {
+        var provider = ServiceProviderFactory.Create();
+        var cmd = provider.GetServiceType<IProvider<QueryCmd>>().Provide();
+        var processor = provider.GetServiceType<IProcessor<QueryCmd, QueryRes>>();
+
+        processor.ProcessAsync(cmd).Wait();
+    }
+
     public static void WorkItems()
     {
         var provider = ServiceProviderFactory.Create();
@@ -39,15 +48,13 @@ public static class Core
 
     public static void Folder()
     {
-        var cancellationToken = new CancellationToken();
         var provider = ServiceProviderFactory.Create();
-
-        var workflowContextFactory = provider.GetServiceType<IWorkflowContextFactory>();
-        var context = workflowContextFactory.Create();
-        var cmd = new CreateFolderCmd { FolderName = "Trx", QueryFolderPath = "Shared Queries/Customers and Emerging Markets/Rapid Response/N2 Chapmans Peak Project Team" };
-        var workflow = provider.GetServiceType<IWorkflow<CreateFolderCmd>>();
-        var msg = workflow.Init(context, cmd).Resolve(cancellationToken).Result;
-
-        System.Console.WriteLine(msg);
+        var cmd = new CreateFolderCmd 
+        { 
+            FolderName = "XYZ", 
+            QueryFolderPath = "Shared Queries/Customers and Emerging Markets/Rapid Response/N2 Chapmans Peak Project Team/Project Metrics/Dashboard Queries" 
+        };
+        var processor = provider.GetServiceType<IProcessor<CreateFolderCmd, FolderRes>>();
+        processor.ProcessAsync(cmd).Wait();
     }
 }

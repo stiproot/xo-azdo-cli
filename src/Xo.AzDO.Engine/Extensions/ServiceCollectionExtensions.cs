@@ -27,7 +27,7 @@ public static class ServiceCollectionExtensions
 
         @this.TryAddSingleton<ITypeSerializer, TypeSerializer>();
 
-        @this.TryAddSingleton<IProcessor<CreateDashboardWorkflowCmd, DashboardWorkflowRes>, DashboardWorkflowProcessorV2>();
+        @this.TryAddSingleton<IProcessor<CreateDashboardWorkflowCmd, DashboardWorkflowRes>, DashboardWorkflowProcessorV3>();
         @this.TryAddSingleton<IProcessor<CreateDashboardCmd, DashboardRes>, DashboardProcessor>();
         @this.TryAddSingleton<IProcessor<QueryCmd, QueryRes>, QueryProcessor>();
         @this.TryAddSingleton<IProcessor<CreateFolderCmd, FolderRes>, CreateFolderProcessor>();
@@ -40,10 +40,12 @@ public static class ServiceCollectionExtensions
         @this.TryAddSingleton<IProcessor<CloneWiCmd, CloneWiRes>, CloneWiProcessor>();
         @this.TryAddSingleton<IProcessor<GetWiCmd, GetWiRes>, GetWiProcessor>();
         @this.TryAddSingleton<IProcessor<QueryByWiqlCmd, QueryByWiqlRes>, QueryByWiqlProcessor>();
+        @this.TryAddSingleton<IProcessor<GetQueryCmd, GetQueryRes>, GetQueryProcessor>();
 
         @this.TryAddSingleton<IProvider<CreateDashboardWorkflowCmd>, DashboardWorkflowCmdProvider>();
         @this.TryAddSingleton<IProvider<CloneWiCmd>, CloneWiCmdProvider>();
         @this.TryAddSingleton<IProvider<QueryByWiqlCmd>, QueryByWiqlCmdProvider>();
+        @this.TryAddSingleton<IProvider<QueryCmd>, CreateQueryCmdProvider>();
         @this.TryAddSingleton<IProvider<IEnumerable<CreateWiCmd>>, CreateWiCmdProvider>();
         @this.TryAddSingleton<IJsonProvider, JsonProvider>();
 

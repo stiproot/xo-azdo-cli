@@ -17,7 +17,6 @@ public class QueryFolderWorkflow : BaseWorkflow, IWorkflow<CreateFolderCmd>
         CreateFolderCmd cmd
     )
     {
-
         return this._StateManager
             // todo: update this...
             // .IsNotNull<IProcessor<GetFolderCmd, FolderRes>>()

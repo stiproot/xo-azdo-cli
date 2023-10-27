@@ -8,6 +8,7 @@ public class CreateDashboardWorkflowCmd : IProcessorCmd
     public string QueryFolderBasePath { get; init; }
     public IEnumerable<Initiative> Initiatives { get; init; }
     public string IterationName => this.IterationPath.Split('\\').Last(); 
+    public string QueryFolderPath => $"{this.QueryFolderBasePath}/{this.DashboardName}";
 }
 
 public class Initiative
