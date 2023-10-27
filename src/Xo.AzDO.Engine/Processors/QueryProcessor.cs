@@ -31,10 +31,14 @@ public class QueryProcessor : BaseHttpProcessor, IProcessor<QueryCmd, QueryRes>
                 Wiql = wiq.WiQuery,
                 Name = cmd.QueryName
             });
+            Console.WriteLine(reqContent);
             var req = HttpRequestMessageFactory.Create(uri, reqContent, HttpMethod.Post);
 
             using var httpClient = this.CreateHttpClient();
             var resp = await httpClient.SendAsync(req);
+
+            Console.WriteLine(await resp.Content.ReadAsStringAsync());
+
             resp.EnsureSuccessStatusCode();
             var respContent = await resp.Content.ReadAsStringAsync();
 
@@ -42,7 +46,9 @@ public class QueryProcessor : BaseHttpProcessor, IProcessor<QueryCmd, QueryRes>
         }
         catch (Exception ex)
         {
-            Console.WriteLine(this._TypeSerializer.Serialize(ex));
+            Console.WriteLine(ex.StackTrace);
+            Console.WriteLine(ex.Message);
+            Console.WriteLine(ex.InnerException?.StackTrace);
             throw;
         }
     }
