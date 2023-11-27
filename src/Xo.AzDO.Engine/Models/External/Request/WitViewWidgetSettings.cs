@@ -8,9 +8,13 @@ public class WitViewWidgetSettings
 	[JsonProperty("selectedColumns")]
 	public IEnumerable<Column> SelectedColumns { get; init; } = new List<Column>
 	{
-		new() { Name = "Title", ReferenceName = "System.Title" },
-		new() { Name = "Assigned To", ReferenceName = "System.AssignedTo" },
-		new() { Name = "State", ReferenceName = "System.State" }
+        new() { Name = "Priority", ReferenceName = "Microsoft.VSTS.Common.Priority" },
+        new() { Name = "ID", ReferenceName = "System.Id" },
+        new() { Name = "State", ReferenceName = "System.State" },
+        new() { Name = "Title", ReferenceName = "System.Title" },
+        new() { Name = "Assigned To", ReferenceName = "System.AssignedTo" },
+        new() { Name = "Tags", ReferenceName = "System.Tags" },
+        new() { Name = "Story Points", ReferenceName = "Microsoft.VSTS.Scheduling.StoryPoints" }
 	};
 }
 
