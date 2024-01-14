@@ -1,6 +1,6 @@
 namespace Xo.AzDO.Engine.Mappers;
 
-public sealed class ExtWiReqMapper : IMapper<CreateWiCmd, ExtWiReq>
+public sealed class ExtCreateWiReqMapper : IMapper<CreateWiCmd, ExtWiReq>
 {
 	private static IDictionary<string, string> PropertyNameMappings = new Dictionary<string, string>
 	{

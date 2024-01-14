@@ -9,7 +9,8 @@ class Program
         // Core.Dashboard();
         // Core.QueryByWiql();
         // Core.CloneWorkItem();
-        Core.Dashboard();
+        // Core.Dashboard();
         // Core.CreateQuery();
+        Core.UpdateWorkItems();
     }
 }

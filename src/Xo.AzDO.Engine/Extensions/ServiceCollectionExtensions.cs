@@ -36,20 +36,23 @@ public static class ServiceCollectionExtensions
         @this.TryAddSingleton<IProcessor<GetProjectDetailsCmd, ProjectRes>, ProjectProcessor>();
         @this.TryAddSingleton<IProcessor<GetTeamDetailsCmd, TeamRes>, TeamProcessor>();
         @this.TryAddSingleton<IProcessor<GetIterationsCmd, IterationsRes>, IterationsProcessor>();
-        @this.TryAddSingleton<IProcessor<CreateWiCmd, WiRes>, WiProcessor>();
+        @this.TryAddSingleton<IProcessor<CreateWiCmd, WiRes>, CreateWiProcessor>();
         @this.TryAddSingleton<IProcessor<CloneWiCmd, CloneWiRes>, CloneWiProcessor>();
         @this.TryAddSingleton<IProcessor<GetWiCmd, GetWiRes>, GetWiProcessor>();
         @this.TryAddSingleton<IProcessor<QueryByWiqlCmd, QueryByWiqlRes>, QueryByWiqlProcessor>();
         @this.TryAddSingleton<IProcessor<GetQueryCmd, GetQueryRes>, GetQueryProcessor>();
+        @this.TryAddSingleton<IProcessor<UpdateWiCmd, WiRes>, UpdateWiProcessor>();
 
         @this.TryAddSingleton<IProvider<CreateDashboardWorkflowCmd>, DashboardWorkflowCmdProvider>();
+        @this.TryAddSingleton<IProvider<UpdateWiCmd>, UpdateWiCmdProvider>();
         @this.TryAddSingleton<IProvider<CloneWiCmd>, CloneWiCmdProvider>();
         @this.TryAddSingleton<IProvider<QueryByWiqlCmd>, QueryByWiqlCmdProvider>();
         @this.TryAddSingleton<IProvider<QueryCmd>, CreateQueryCmdProvider>();
         @this.TryAddSingleton<IProvider<IEnumerable<CreateWiCmd>>, CreateWiCmdProvider>();
         @this.TryAddSingleton<IJsonProvider, JsonProvider>();
 
-        @this.TryAddSingleton<IMapper<CreateWiCmd, ExtWiReq>, ExtWiReqMapper>();
+        @this.TryAddSingleton<IMapper<CreateWiCmd, ExtWiReq>, ExtCreateWiReqMapper>();
+        @this.TryAddSingleton<IMapper<UpdateWiCmd, ExtWiReq>, ExtUpdateWiReqMapper>();
 
         @this.TryAddSingleton<IWidgetBuilderFactory, WidgetBuilderFactory>();
 

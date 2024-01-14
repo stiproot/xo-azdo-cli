@@ -18,10 +18,3 @@ public class CreateWiCmd : IProcessorCmd
     public IList<CreateWiCmd> children { get; init; } = new List<CreateWiCmd>();
     public ExtWiResp ExtResp { get; set; }
 }
-
-public class WorkItemRelation
-{
-    public object attributes { get; init; }
-    public string relation_type { get; init; }
-    public string url { get; init; }
-}

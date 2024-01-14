@@ -1,11 +1,11 @@
 ﻿namespace Xo.AzDO.Engine.Processors;
 
-public class WiProcessor : BaseHttpProcessor, IProcessor<CreateWiCmd, WiRes>
+public class CreateWiProcessor : BaseHttpProcessor, IProcessor<CreateWiCmd, WiRes>
 {
 	private readonly IMapper<CreateWiCmd, ExtWiReq> _extReqMapper;
 	const string API_VERSION = "7.0";
 
-	public WiProcessor(
+	public CreateWiProcessor(
 		IHttpClientFactory httpClientFactory,
 		ITypeSerializer typeSerializer,
 		IMapper<CreateWiCmd, ExtWiReq> typeMapper

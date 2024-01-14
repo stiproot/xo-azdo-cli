@@ -11,7 +11,7 @@ public static class Core
         processor.ProcessAsync(cmd).Wait();
     }
 
-    public static void WorkItems()
+    public static void CreateWorkItems()
     {
         var provider = ServiceProviderFactory.Create();
         var cmds = provider.GetServiceType<IProvider<IEnumerable<CreateWiCmd>>>().Provide();
@@ -55,6 +55,14 @@ public static class Core
             QueryFolderPath = "Shared Queries/Customers and Emerging Markets/Rapid Response/N2 Chapmans Peak Project Team/Project Metrics/Dashboard Queries" 
         };
         var processor = provider.GetServiceType<IProcessor<CreateFolderCmd, FolderRes>>();
+        processor.ProcessAsync(cmd).Wait();
+    }
+
+    public static void UpdateWorkItems()
+    {
+        var provider = ServiceProviderFactory.Create();
+        var cmd = provider.GetServiceType<IProvider<UpdateWiCmd>>().Provide();
+        var processor = provider.GetServiceType<IProcessor<UpdateWiCmd, WiRes>>();
         processor.ProcessAsync(cmd).Wait();
     }
 }
