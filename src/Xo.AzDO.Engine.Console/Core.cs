@@ -62,7 +62,7 @@ public static class Core
     {
         var provider = ServiceProviderFactory.Create();
         var cmd = provider.GetServiceType<IProvider<UpdateWiCmd>>().Provide();
-        var processor = provider.GetServiceType<IProcessor<UpdateWiCmd, WiRes>>();
+        var processor = provider.GetServiceType<IProcessor<UpdateWiCmd, UpdateWiRes>>();
         processor.ProcessAsync(cmd).Wait();
     }
 }

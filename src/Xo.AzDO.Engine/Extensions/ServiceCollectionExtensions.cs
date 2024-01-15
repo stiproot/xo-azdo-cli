@@ -41,7 +41,7 @@ public static class ServiceCollectionExtensions
         @this.TryAddSingleton<IProcessor<GetWiCmd, GetWiRes>, GetWiProcessor>();
         @this.TryAddSingleton<IProcessor<QueryByWiqlCmd, QueryByWiqlRes>, QueryByWiqlProcessor>();
         @this.TryAddSingleton<IProcessor<GetQueryCmd, GetQueryRes>, GetQueryProcessor>();
-        @this.TryAddSingleton<IProcessor<UpdateWiCmd, WiRes>, UpdateWiProcessor>();
+        @this.TryAddSingleton<IProcessor<UpdateWiCmd, UpdateWiRes>, UpdateWiProcessor>();
 
         @this.TryAddSingleton<IProvider<CreateDashboardWorkflowCmd>, DashboardWorkflowCmdProvider>();
         @this.TryAddSingleton<IProvider<UpdateWiCmd>, UpdateWiCmdProvider>();

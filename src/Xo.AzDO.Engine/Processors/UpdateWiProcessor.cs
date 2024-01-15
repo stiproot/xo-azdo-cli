@@ -1,6 +1,6 @@
 ﻿namespace Xo.AzDO.Engine.Processors;
 
-public class UpdateWiProcessor : BaseHttpProcessor, IProcessor<UpdateWiCmd, WiRes>
+public class UpdateWiProcessor : BaseHttpProcessor, IProcessor<UpdateWiCmd, UpdateWiRes>
 {
     private readonly IMapper<UpdateWiCmd, ExtWiReq> _extReqMapper;
     const string API_VERSION = "7.2-preview.3";
@@ -16,10 +16,10 @@ public class UpdateWiProcessor : BaseHttpProcessor, IProcessor<UpdateWiCmd, WiRe
     )
         => this._extReqMapper = typeMapper ?? throw new ArgumentNullException(nameof(typeMapper));
 
-    public async Task<WiRes> ProcessAsync(UpdateWiCmd cmd)
+    public async Task<UpdateWiRes> ProcessAsync(UpdateWiCmd cmd)
     {
         await this.CoreProcessAsync(cmd);
-        return new WiRes { Cmd = cmd };
+        return new UpdateWiRes { Cmd = cmd };
     }
 
     private async Task CoreProcessAsync(UpdateWiCmd cmd)
