@@ -65,4 +65,12 @@ public static class Core
         var processor = provider.GetServiceType<IProcessor<UpdateWiCmd, UpdateWiRes>>();
         processor.ProcessAsync(cmd).Wait();
     }
+
+    public static void UpdateWorkItemHierarchy()
+    {
+        var provider = ServiceProviderFactory.Create();
+        var cmd = provider.GetServiceType<IProvider<UpdateWiHierarchyCmd>>().Provide();
+        var processor = provider.GetServiceType<IProcessor<UpdateWiHierarchyCmd, UpdateWiHierarchyRes>>();
+        processor.ProcessAsync(cmd).Wait();
+    }
 }

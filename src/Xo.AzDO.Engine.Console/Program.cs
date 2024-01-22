@@ -11,6 +11,7 @@ class Program
         // Core.CloneWorkItem();
         // Core.Dashboard();
         // Core.CreateQuery();
-        Core.UpdateWorkItems();
+        // Core.UpdateWorkItems();
+        Core.UpdateWorkItemHierarchy();
     }
 }

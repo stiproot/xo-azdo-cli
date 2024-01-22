@@ -42,6 +42,7 @@ public static class ServiceCollectionExtensions
         @this.TryAddSingleton<IProcessor<QueryByWiqlCmd, QueryByWiqlRes>, QueryByWiqlProcessor>();
         @this.TryAddSingleton<IProcessor<GetQueryCmd, GetQueryRes>, GetQueryProcessor>();
         @this.TryAddSingleton<IProcessor<UpdateWiCmd, UpdateWiRes>, UpdateWiProcessor>();
+        @this.TryAddSingleton<IProcessor<UpdateWiHierarchyCmd, UpdateWiHierarchyRes>, UpdateWiHierarchyProcessor>();
 
         @this.TryAddSingleton<IProvider<CreateDashboardWorkflowCmd>, DashboardWorkflowCmdProvider>();
         @this.TryAddSingleton<IProvider<UpdateWiCmd>, UpdateWiCmdProvider>();
@@ -49,6 +50,7 @@ public static class ServiceCollectionExtensions
         @this.TryAddSingleton<IProvider<QueryByWiqlCmd>, QueryByWiqlCmdProvider>();
         @this.TryAddSingleton<IProvider<QueryCmd>, CreateQueryCmdProvider>();
         @this.TryAddSingleton<IProvider<IEnumerable<CreateWiCmd>>, CreateWiCmdProvider>();
+        @this.TryAddSingleton<IProvider<UpdateWiHierarchyCmd>, UpdateWiHierarchyCmdProvider>();
         @this.TryAddSingleton<IJsonProvider, JsonProvider>();
 
         @this.TryAddSingleton<IMapper<CreateWiCmd, ExtWiReq>, ExtCreateWiReqMapper>();
