@@ -5,16 +5,17 @@ public sealed class ExtCreateWiReqMapper : IMapper<CreateWiCmd, ExtWiReq>
 	private static IDictionary<string, string> PropertyNameMappings = new Dictionary<string, string>
 	{
 		{ nameof(CreateWiCmd.title), "/fields/System.Title" },
-		{ nameof(CreateWiCmd.area_path), "/fields/System.AreaPath" },
-		{ nameof(CreateWiCmd.iteration_path), "/fields/System.IterationPath" },
 		{ nameof(CreateWiCmd.tags), "/fields/System.Tags" },
 		{ nameof(CreateWiCmd.description), "/fields/System.Description" },
-		{ nameof(CreateWiCmd.acceptance_criteria), "/fields/Microsoft.VSTS.Common.AcceptanceCriteria" },
-		{ nameof(CreateWiCmd.state), "/fields/System.State" },
 		{ nameof(CreateWiCmd.assigned_to), "/fields/System.AssignedTo" },
-		{ nameof(CreateWiCmd.remaining), "/fields/Microsoft.VSTS.Scheduling.RemainingWork" },
-		{ nameof(CreateWiCmd.original_estimate), "/fields/Microsoft.VSTS.Scheduling.OriginalEstimate" },
+		{ nameof(CreateWiCmd.acceptance_criteria), "/fields/Microsoft.VSTS.Common.AcceptanceCriteria" },
+		{ nameof(CreateWiCmd.area_path), "/fields/System.AreaPath" },
+		{ nameof(CreateWiCmd.iteration_path), "/fields/System.IterationPath" },
+		{ nameof(CreateWiCmd.state), "/fields/System.State" },
 		{ nameof(CreateWiCmd.story_points), "/fields/Microsoft.VSTS.Scheduling.StoryPoints" },
+		{ nameof(CreateWiCmd.original_estimate), "/fields/Microsoft.VSTS.Scheduling.OriginalEstimate" },
+		{ nameof(CreateWiCmd.remaining), "/fields/Microsoft.VSTS.Scheduling.RemainingWork" },
+		{ nameof(CreateWiCmd.completed), "/fields/Microsoft.VSTS.Scheduling.CompletedWork" },
 	};
 
 	private static IDictionary<string, string> PropertyValueMappings = new Dictionary<string, string>

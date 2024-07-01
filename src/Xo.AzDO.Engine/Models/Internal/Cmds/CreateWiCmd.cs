@@ -12,6 +12,7 @@ public class CreateWiCmd : IProcessorCmd
     public string assigned_to { get; init; }
     public string state { get; init; }
     public string remaining { get; init; }
+    public string completed { get; init; }
     public string original_estimate { get; init; }
     public string story_points { get; init; }
     public WorkItemRelation relation { get; set; }

@@ -211,7 +211,7 @@ public class DashboardWorkflowProcessorV3 : IProcessor<CreateDashboardWorkflowCm
                             new() {Column = "[System.WorkItemType]", Condition = "'Task'"},
                             new() {Column = "[System.ChangedDate]", Operator = "<", Condition = "@startOfDay('-7d')"},
                             new() {Column = "[System.State]", Condition = "'Active'"},
-                            new() {Column = "[Microsoft.VSTS.Scheduling.RemainingWork]", Operator = ">", Condition = "0"},
+                            // new() {Column = "[Microsoft.VSTS.Scheduling.RemainingWork]", Operator = ">", Condition = "0"},
                             new() {Column = "[System.IterationPath]", Condition = $"'{cmd.IterationPath}'"},
                         }
                     }
@@ -255,7 +255,7 @@ public class DashboardWorkflowProcessorV3 : IProcessor<CreateDashboardWorkflowCm
                             new() {Column = "[System.WorkItemType]", Condition = "'Task'"},
                             new() {Column = "[System.ChangedDate]", Operator = "<", Condition = "@startOfDay('-1d')"},
                             new() {Column = "[System.State]", Condition = "'Active'"},
-                            new() {Column = "[Microsoft.VSTS.Scheduling.RemainingWork]", Operator = ">", Condition = "0"},
+                            // new() {Column = "[Microsoft.VSTS.Scheduling.RemainingWork]", Operator = ">", Condition = "0"},
                             new() {Column = "[System.IterationPath]", Condition = $"'{cmd.IterationPath}'"},
                         }
                     }
@@ -400,13 +400,13 @@ public class DashboardWorkflowProcessorV3 : IProcessor<CreateDashboardWorkflowCm
                                 new() {Column = "[Source].[System.WorkItemType]", Operator = "<>", Condition = "''", GroupingKey = 1},
                                 new() {Column = "[Source].[System.IterationPath]", Condition = $"'{cmd.IterationPath}'", GroupingKey = 1},
                                 new() {Column = "[Source].[System.Tags]", Operator = "CONTAINS", Condition = $"'{initiative.Tag}'", GroupingKey = 1},
-                                new() {Column = "[Source].[Microsoft.VSTS.Scheduling.StoryPoints]", Operator = ">", Condition = "0", GroupingKey = 1},
+                                // new() {Column = "[Source].[Microsoft.VSTS.Scheduling.StoryPoints]", Operator = ">", Condition = "0", GroupingKey = 1},
                                 new() {Column = "[System.Links.LinkType]", Condition = "'System.LinkTypes.Hierarchy-Forward'", GroupingKey = 2},
                                 new() {Column = "[Target].[System.TeamProject]", Condition = "'Software'", GroupingKey = 3},
                                 new() {Column = "[Target].[System.WorkItemType]", Operator = "<>", Condition = "''", GroupingKey = 3},
                                 new() {Column = "[Target].[System.Tags]", Operator = "CONTAINS", Condition = $"'{initiative.Tag}'", GroupingKey = 3},
-                                new() {Column = "[Target].[Microsoft.VSTS.Scheduling.RemainingWork]", Operator = ">", Condition = "0", GroupingKey = 3},
-                                new() {Column = "[Target].[Microsoft.VSTS.Scheduling.OriginalEstimate]", Operator = ">", Condition = "0", GroupingKey = 3},
+                                // new() {Column = "[Target].[Microsoft.VSTS.Scheduling.RemainingWork]", Operator = ">", Condition = "0", GroupingKey = 3},
+                                // new() {Column = "[Target].[Microsoft.VSTS.Scheduling.OriginalEstimate]", Operator = ">", Condition = "0", GroupingKey = 3},
                             }
                         }
                     },

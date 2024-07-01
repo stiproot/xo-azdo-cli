@@ -6,8 +6,8 @@ public class UpdateWiCmdProvider : IProvider<UpdateWiCmd>
     {
         return new UpdateWiCmd
         {
-            id = 1160264,
-            complete = 20,
+            id = 1,
+            complete = 21,
             history = "(Automated) update of % complete"
         };
     }

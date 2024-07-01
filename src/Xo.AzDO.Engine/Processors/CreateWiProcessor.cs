@@ -4,6 +4,7 @@ public class CreateWiProcessor : BaseHttpProcessor, IProcessor<CreateWiCmd, WiRe
 {
 	private readonly IMapper<CreateWiCmd, ExtWiReq> _extReqMapper;
 	const string API_VERSION = "7.0";
+	private readonly HttpClient _httpClient; 
 
 	public CreateWiProcessor(
 		IHttpClientFactory httpClientFactory,
@@ -14,7 +15,10 @@ public class CreateWiProcessor : BaseHttpProcessor, IProcessor<CreateWiCmd, WiRe
 				API_VERSION, 
 				typeSerializer
 	) 
-		=> this._extReqMapper = typeMapper ?? throw new ArgumentNullException(nameof(typeMapper));
+	{
+		this._extReqMapper = typeMapper ?? throw new ArgumentNullException(nameof(typeMapper));
+		this._httpClient = this.CreateHttpClient();
+	}
 
 	public async Task<WiRes> ProcessAsync(CreateWiCmd cmd)
 	{
@@ -29,8 +33,8 @@ public class CreateWiProcessor : BaseHttpProcessor, IProcessor<CreateWiCmd, WiRe
 		Console.WriteLine(reqContent);
 		var httpReq = HttpRequestMessageFactory.Create(url, reqContent, HttpMethod.Post, mediaType: "application/json-patch+json");
 
-		using var httpClient = this.CreateHttpClient();
-		var resp = await httpClient.SendAsync(httpReq);
+		// using var httpClient = this.CreateHttpClient();
+		var resp = await this._httpClient.SendAsync(httpReq);
 		resp.EnsureSuccessStatusCode();
 		var respContent = await resp.Content.ReadAsStringAsync();
 

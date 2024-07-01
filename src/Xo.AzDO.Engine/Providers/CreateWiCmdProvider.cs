@@ -8,6 +8,6 @@ public class CreateWiCmdProvider : IProvider<IEnumerable<CreateWiCmd>>
 
     // Example...
     public IEnumerable<CreateWiCmd> Provide()
-        => this._jsonProvider.GetContent<IEnumerable<CreateWiCmd>>(@"Import\import.json");
+        => this._jsonProvider.GetContent<IEnumerable<CreateWiCmd>>(@"Import/import.json");
 }
 
