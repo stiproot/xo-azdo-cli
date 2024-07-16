@@ -23,49 +23,35 @@ public class QueryProcessor : BaseHttpProcessor, IProcessor<QueryCmd, QueryRes>
 
     public async Task<QueryRes> ProcessAsync(QueryCmd cmd)
     {
-        try
+        string url = $"{BASE_URL}/{PROJECT_NAME}/_apis/wit/queries/{cmd.QueryFolderPath}?api-version={this._ApiVersion}";
+        var uri = new Uri(url);
+
+        string queryPath = $"{cmd.QueryFolderPath}/{cmd.QueryName}";
+        var getQueryCmd = new GetQueryCmd { QueryPath = queryPath };
+        var getQueryRes = await this._getQueryProcessor.ProcessAsync(getQueryCmd);
+
+        if (getQueryRes.IsSuccessful)
         {
-            string url = $"{BASE_URL}/{PROJECT_NAME}/_apis/wit/queries/{cmd.QueryFolderPath}?api-version={this._ApiVersion}";
-            var uri = new Uri(url);
-
-            // Determine if query exists...
-            string queryPath = $"{cmd.QueryFolderPath}/{cmd.QueryName}";
-            var getQueryCmd = new GetQueryCmd { QueryPath = queryPath };
-            var getQueryRes = await this._getQueryProcessor.ProcessAsync(getQueryCmd);
-
-            if(getQueryRes.IsSuccessful)
-            {
-                return new QueryRes { ExtResp = getQueryRes.ExtResp! };
-            }
-
-            var wiql = cmd.Wiql is not null ? cmd.Wiql : this._wiqlProcessor.ProcessAsync(cmd.BuildWiqlCmd!).Result.WiQuery;
-
-            var reqContent = this._TypeSerializer.Serialize(new ExtQueryReq
-            {
-                Wiql = wiql,
-                Name = cmd.QueryName
-            });
-
-            Console.WriteLine(reqContent);
-
-            var req = HttpRequestMessageFactory.Create(uri, reqContent, HttpMethod.Post);
-
-            using var httpClient = this.CreateHttpClient();
-            var resp = await httpClient.SendAsync(req);
-            Console.WriteLine(await resp.Content.ReadAsStringAsync());
-
-            resp.EnsureSuccessStatusCode();
-
-            var respContent = await resp.Content.ReadAsStringAsync();
-
-            return new QueryRes { ExtResp = this._TypeSerializer.Deserialize<ExtQueryResp>(respContent) };
+            return new QueryRes { ExtResp = getQueryRes.ExtResp! };
         }
-        catch (Exception ex)
+
+        var wiql = cmd.Wiql is not null ? cmd.Wiql : this._wiqlProcessor.ProcessAsync(cmd.BuildWiqlCmd!).Result.WiQuery;
+
+        var reqContent = this._TypeSerializer.Serialize(new ExtQueryReq
         {
-            Console.WriteLine(ex.StackTrace);
-            Console.WriteLine(ex.Message);
-            Console.WriteLine(ex.InnerException?.StackTrace);
-            throw;
-        }
+            Wiql = wiql,
+            Name = cmd.QueryName
+        });
+
+        var req = HttpRequestMessageFactory.Create(uri, reqContent, HttpMethod.Post);
+
+        using var httpClient = this.CreateHttpClient();
+        var resp = await httpClient.SendAsync(req);
+
+        resp.EnsureSuccessStatusCode();
+
+        var respContent = await resp.Content.ReadAsStringAsync();
+
+        return new QueryRes { ExtResp = this._TypeSerializer.Deserialize<ExtQueryResp>(respContent) };
     }
 }

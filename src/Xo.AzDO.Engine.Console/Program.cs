@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Core.CreateWorkItems();
+        Core.CreateWorkItems();
         // Core.Folder();
         // Core.Dashboard();
         // Core.QueryByWiql();

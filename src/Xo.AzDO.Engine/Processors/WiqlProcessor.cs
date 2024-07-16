@@ -2,7 +2,7 @@ namespace Xo.AzDO.Engine.Processors;
 
 public class WiqlProcessor : IProcessor<BuildWiqlCmd, WiqlRes>
 {
-	public async Task<WiqlRes> ProcessAsync(BuildWiqlCmd cmd) => new WiqlRes { WiQuery = this.BuildQry(cmd) };
+	public async Task<WiqlRes> ProcessAsync(BuildWiqlCmd cmd) => await Task.FromResult(new WiqlRes { WiQuery = this.BuildQry(cmd) });
 
 	private string BuildQry(BuildWiqlCmd cmd)
 	{
@@ -15,8 +15,6 @@ public class WiqlProcessor : IProcessor<BuildWiqlCmd, WiqlRes>
 					"Recursive" => string.Join(" AND ", cmd.Conditions.GroupBy(c => c.GroupingKey).Select(g => $"({string.Join(" AND ", g.Select(c => $"{c.Column} {c.Operator} {c.Condition}"))}) ")) + "MODE (Recursive)",
 					_ => string.Join(" AND ", cmd.Conditions.Select(c => $"{c.Column} {c.Operator} {c.Condition}"))
 				};
-
-		// Console.WriteLine(qry);
 
 		return qry;
 	}

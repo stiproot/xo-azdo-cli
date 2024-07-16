@@ -9,7 +9,6 @@ public class PatProvider : IProvider<Pat>
     public Pat Provide()
     {
         string base64 = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", this._config.Pat)));
-        Console.WriteLine(base64);
         return new Pat { Token = this._config.Pat, Base64EncodedToken = base64 };
     }
 }

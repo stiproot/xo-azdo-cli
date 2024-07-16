@@ -28,7 +28,6 @@ public sealed class ExtUpdateWiReqMapper : IMapper<UpdateWiCmd, ExtWiReq>
 
 	private object PropNameSwitch(PropertyInfo propInfo, UpdateWiCmd cmd)
 	{
-		Console.WriteLine(propInfo.Name);
 		return propInfo.Name switch
 		{
 			_ => new

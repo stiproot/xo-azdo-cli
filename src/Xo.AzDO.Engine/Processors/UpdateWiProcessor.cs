@@ -24,17 +24,13 @@ public class UpdateWiProcessor : BaseHttpProcessor, IProcessor<UpdateWiCmd, Upda
 
     private async Task CoreProcessAsync(UpdateWiCmd cmd)
     {
-		// https://dev.azure.com/Derivco/Software/_apis/wit/workitems/1160264?api-version=7.2-preview.3
-
         var url = new Uri($"{BASE_URL}/{PROJECT_NAME}/_apis/wit/workitems/{cmd.id}?api-version={this._ApiVersion}");
         var reqContent = this._TypeSerializer.Serialize(this._extReqMapper.Map(cmd).workitem_payload);
-        Console.WriteLine(reqContent);
         var httpReq = HttpRequestMessageFactory.Create(url, reqContent, HttpMethod.Patch, mediaType: "application/json-patch+json");
 
         using var httpClient = this.CreateHttpClient();
         var resp = await httpClient.SendAsync(httpReq);
         var respContent = await resp.Content.ReadAsStringAsync();
-        Console.WriteLine(respContent);
         resp.EnsureSuccessStatusCode();
 
         var type = this._TypeSerializer.Deserialize<ExtWiResp>(respContent);

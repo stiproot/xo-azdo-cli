@@ -32,7 +32,6 @@ public sealed class ExtCreateWiReqMapper : IMapper<CreateWiCmd, ExtWiReq>
 
 	private object PropNameSwitch(PropertyInfo propInfo, CreateWiCmd cmd)
 	{
-		Console.WriteLine(propInfo.Name);
 		return propInfo.Name switch
 		{
 			nameof(CreateWiCmd.relation) => new { op = "add", path = "/relations/-", value = new { rel = PropertyValueMappings[cmd.relation.relation_type], url = cmd.relation.url } },

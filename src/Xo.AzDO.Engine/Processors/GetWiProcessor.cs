@@ -22,8 +22,6 @@ public class GetWiProcessor : BaseHttpProcessor, IProcessor<GetWiCmd, GetWiRes>
         resp.EnsureSuccessStatusCode();
         var respContent = await resp.Content.ReadAsStringAsync();
 
-        Console.WriteLine(respContent);
-
         var type = this._TypeSerializer.Deserialize<ExtGetWiResp>(respContent);
 
         return new GetWiRes { ExtResp = type };
