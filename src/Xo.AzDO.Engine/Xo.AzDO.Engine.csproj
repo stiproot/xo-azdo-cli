@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Title>Xo.AzDO.Engine</Title>
     <Description>Helpful AzDO proxy module.</Description>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
