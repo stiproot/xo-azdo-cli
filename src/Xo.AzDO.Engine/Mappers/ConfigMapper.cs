@@ -6,7 +6,15 @@ public class ConfigMapper
 {
 	public static void Map(IConfigurationRoot configurationRoot, out Config config)
 	{
-		config = new Config();
-		configurationRoot.GetSection("secrets").Bind(config);
+		var pat = configurationRoot.GetSection("secrets")["pat"];
+		var orgName = configurationRoot.GetSection("azdo")["orgName"];
+		var projectName = configurationRoot.GetSection("azdo")["projectName"];
+
+		config = new Config
+		{
+			Pat = pat,
+			OrgName = orgName,
+			ProjectName = projectName
+		};
 	}
 }

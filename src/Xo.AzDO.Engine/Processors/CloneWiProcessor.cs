@@ -12,8 +12,9 @@ public class CloneWiProcessor : BaseHttpProcessor, IProcessor<CloneWiCmd, CloneW
         IHttpClientFactory httpClientFactory,
         ITypeSerializer typeSerializer,
         IProcessor<GetWiCmd, GetWiRes> getWiProcessor,
-        IProcessor<CreateWiCmd, WiRes> createWiProcessor
-    ) : base(httpClientFactory, API_VERSION, typeSerializer)
+        IProcessor<CreateWiCmd, WiRes> createWiProcessor,
+        Config config
+    ) : base(httpClientFactory, API_VERSION, typeSerializer, config)
     {
         this._getWiProcessor = getWiProcessor ?? throw new ArgumentNullException(nameof(getWiProcessor));
         this._createWiProcessor = createWiProcessor ?? throw new ArgumentNullException(nameof(createWiProcessor));
@@ -29,7 +30,7 @@ public class CloneWiProcessor : BaseHttpProcessor, IProcessor<CloneWiCmd, CloneW
         createWiCmd.relation = new Models.WorkItemRelation
         {
             relation_type = "Child",
-            url = $"https://dev.azure.com/Derivco/Software/_workitems/edit/{cmd.ParentId}"
+            url = $"{BASE_URL}/{PROJECT_NAME}/_workitems/edit/{cmd.ParentId}"
         };
 
         WiRes wi = await this._createWiProcessor.ProcessAsync(createWiCmd);

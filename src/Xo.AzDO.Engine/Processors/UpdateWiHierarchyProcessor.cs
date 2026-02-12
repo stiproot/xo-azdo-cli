@@ -12,8 +12,9 @@ public class UpdateWiHierarchyProcessor : BaseHttpProcessor, IProcessor<UpdateWi
         IHttpClientFactory httpClientFactory,
         ITypeSerializer typeSerializer,
         IProcessor<GetWiCmd, GetWiRes> getWiProcessor,
-        IProcessor<UpdateWiCmd, UpdateWiRes> updateWiProcessor
-    ) : base(httpClientFactory, API_VERSION, typeSerializer)
+        IProcessor<UpdateWiCmd, UpdateWiRes> updateWiProcessor,
+        Config config
+    ) : base(httpClientFactory, API_VERSION, typeSerializer, config)
     {
         this._getWiProcessor = getWiProcessor ?? throw new ArgumentNullException(nameof(getWiProcessor));
         this._updateWiProcessor = updateWiProcessor ?? throw new ArgumentNullException(nameof(updateWiProcessor));

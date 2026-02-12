@@ -6,8 +6,9 @@ public class ProjectProcessor : BaseHttpProcessor, IProcessor<GetProjectDetailsC
 
 	public ProjectProcessor(
 		IHttpClientFactory httpClientFactory,
-		ITypeSerializer typeSerializer
-	) : base(httpClientFactory, API_VERSION, typeSerializer) { }
+		ITypeSerializer typeSerializer,
+		Config config
+	) : base(httpClientFactory, API_VERSION, typeSerializer, config) { }
 
 	public async Task<ProjectRes> ProcessAsync(GetProjectDetailsCmd cmd)
 	{

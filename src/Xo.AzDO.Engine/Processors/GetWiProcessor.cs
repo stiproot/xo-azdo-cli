@@ -6,8 +6,9 @@ public class GetWiProcessor : BaseHttpProcessor, IProcessor<GetWiCmd, GetWiRes>
 
     public GetWiProcessor(
         IHttpClientFactory httpClientFactory,
-        ITypeSerializer typeSerializer
-    ) : base(httpClientFactory, API_VERSION, typeSerializer)
+        ITypeSerializer typeSerializer,
+        Config config
+    ) : base(httpClientFactory, API_VERSION, typeSerializer, config)
     {
     }
 

@@ -331,3 +331,5 @@ ASALocalRun/
 src/Platform.ApiDocs.Explorer/.config/
 
 tools/
+
+import.json

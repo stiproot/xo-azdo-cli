@@ -9,11 +9,13 @@ public class CreateWiProcessor : BaseHttpProcessor, IProcessor<CreateWiCmd, WiRe
 	public CreateWiProcessor(
 		IHttpClientFactory httpClientFactory,
 		ITypeSerializer typeSerializer,
-		IMapper<CreateWiCmd, ExtWiReq> typeMapper
+		IMapper<CreateWiCmd, ExtWiReq> typeMapper,
+		Config config
 	) : base(
 				httpClientFactory,
 				API_VERSION,
-				typeSerializer
+				typeSerializer,
+				config
 	)
 	{
 		this._extReqMapper = typeMapper ?? throw new ArgumentNullException(nameof(typeMapper));

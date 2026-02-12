@@ -4,7 +4,7 @@ public class UpdateWiHierarchyCmdProvider : IProvider<UpdateWiHierarchyCmd>
 {
     public UpdateWiHierarchyCmd Provide() => new()
     {
-        Id = 1,
-        Tags = ""
+        Id = 777,
+        Tags = "some-tag"
     };
 }

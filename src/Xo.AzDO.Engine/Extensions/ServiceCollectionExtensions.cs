@@ -25,6 +25,7 @@ public static class ServiceCollectionExtensions
             builder.AddConsole();
         });
 
+        @this.TryAddSingleton(config);
         @this.TryAddSingleton<ITypeSerializer, TypeSerializer>();
 
         @this.TryAddSingleton<IProcessor<CreateDashboardWorkflowCmd, DashboardWorkflowRes>, DashboardWorkflowProcessorV3>();

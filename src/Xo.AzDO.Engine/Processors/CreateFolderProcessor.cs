@@ -8,8 +8,9 @@ public class CreateFolderProcessor : BaseHttpProcessor, IProcessor<CreateFolderC
 	public CreateFolderProcessor(
 		IHttpClientFactory httpClientFactory,
 		ITypeSerializer typeSerializer,
-		IProcessor<GetFolderCmd, FolderRes> getFolderProcessor
-	) : base(httpClientFactory, API_VERSION, typeSerializer) 
+		IProcessor<GetFolderCmd, FolderRes> getFolderProcessor,
+		Config config
+	) : base(httpClientFactory, API_VERSION, typeSerializer, config) 
 	{
 		this._getFolderProcessor = getFolderProcessor ?? throw new ArgumentNullException(nameof(getFolderProcessor));
 	}

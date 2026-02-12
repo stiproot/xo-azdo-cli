@@ -4,11 +4,13 @@ public class DashboardProcessor : BaseHttpProcessor, IProcessor<CreateDashboardC
 {
     public DashboardProcessor(
         IHttpClientFactory httpClientFactory,
-        ITypeSerializer typeSerializer
+        ITypeSerializer typeSerializer,
+        Config config
     ) : base(
         httpClientFactory,
         "7.0-preview.3",
-        typeSerializer
+        typeSerializer,
+        config
     )
     { }
 

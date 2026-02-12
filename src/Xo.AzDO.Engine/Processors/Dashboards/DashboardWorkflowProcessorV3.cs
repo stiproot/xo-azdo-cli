@@ -12,6 +12,7 @@ public class DashboardWorkflowProcessorV3 : IProcessor<CreateDashboardWorkflowCm
     private readonly IWorkflow<CreateDashboardWorkflowCmd> _prerequisitsWorkflow;
     private readonly IFn _queryFn;
     private readonly IFn _dashboardFn;
+    private readonly Config _config;
     private IDictionary<string, IRectangle> _rootHash;
     private IDictionary<string, IRectangle> _childHash;
 
@@ -25,7 +26,8 @@ public class DashboardWorkflowProcessorV3 : IProcessor<CreateDashboardWorkflowCm
         ITypeSerializer typeSerializer,
         IWidgetBuilderFactory widgetBuilderFactory,
         IProcessor<CreateFolderCmd, FolderRes> createFolderProcessor,
-        IWorkflow<CreateDashboardWorkflowCmd> prerequisitsWorkflow
+        IWorkflow<CreateDashboardWorkflowCmd> prerequisitsWorkflow,
+        Config config
     )
     {
         this._nodeBuilderFactory = nodeBuilderFactory ?? throw new ArgumentNullException(nameof(nodeBuilderFactory));
@@ -36,6 +38,7 @@ public class DashboardWorkflowProcessorV3 : IProcessor<CreateDashboardWorkflowCm
         this._widgetBuilderFactory = widgetBuilderFactory ?? throw new ArgumentNullException(nameof(widgetBuilderFactory));
         this._createFolderProcessor = createFolderProcessor ?? throw new ArgumentNullException(nameof(createFolderProcessor));
         this._prerequisitsWorkflow = prerequisitsWorkflow ?? throw new ArgumentNullException(nameof(prerequisitsWorkflow));
+        this._config = config ?? throw new ArgumentNullException(nameof(config));
 
         this._queryFn = this._fnFactory
             .Build(typeof(IProcessor<QueryCmd, QueryRes>));
@@ -396,13 +399,13 @@ public class DashboardWorkflowProcessorV3 : IProcessor<CreateDashboardWorkflowCm
                             Table = "WorkItemLinks",
                             Conditions = new List<QryCondition>
                             {
-                                new() {Column = "[Source].[System.TeamProject]", Condition = "'Software'", GroupingKey = 1},
+                                new() {Column = "[Source].[System.TeamProject]", Condition = $"'{this._config.ProjectName}'", GroupingKey = 1},
                                 new() {Column = "[Source].[System.WorkItemType]", Operator = "<>", Condition = "''", GroupingKey = 1},
                                 new() {Column = "[Source].[System.IterationPath]", Condition = $"'{cmd.IterationPath}'", GroupingKey = 1},
                                 new() {Column = "[Source].[System.Tags]", Operator = "CONTAINS", Condition = $"'{initiative.Tag}'", GroupingKey = 1},
                                 // new() {Column = "[Source].[Microsoft.VSTS.Scheduling.StoryPoints]", Operator = ">", Condition = "0", GroupingKey = 1},
                                 new() {Column = "[System.Links.LinkType]", Condition = "'System.LinkTypes.Hierarchy-Forward'", GroupingKey = 2},
-                                new() {Column = "[Target].[System.TeamProject]", Condition = "'Software'", GroupingKey = 3},
+                                new() {Column = "[Target].[System.TeamProject]", Condition = $"'{this._config.ProjectName}'", GroupingKey = 3},
                                 new() {Column = "[Target].[System.WorkItemType]", Operator = "<>", Condition = "''", GroupingKey = 3},
                                 new() {Column = "[Target].[System.Tags]", Operator = "CONTAINS", Condition = $"'{initiative.Tag}'", GroupingKey = 3},
                                 // new() {Column = "[Target].[Microsoft.VSTS.Scheduling.RemainingWork]", Operator = ">", Condition = "0", GroupingKey = 3},

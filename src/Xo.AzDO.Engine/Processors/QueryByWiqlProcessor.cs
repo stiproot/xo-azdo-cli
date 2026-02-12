@@ -8,11 +8,13 @@ public class QueryByWiqlProcessor : BaseHttpProcessor, IProcessor<QueryByWiqlCmd
 	public QueryByWiqlProcessor(
 		IHttpClientFactory httpClientFactory,
 		ITypeSerializer typeSerializer,
-		IProcessor<BuildWiqlCmd, WiqlRes> wiqlProcessor
+		IProcessor<BuildWiqlCmd, WiqlRes> wiqlProcessor,
+		Config config
 	) : base(
 		httpClientFactory,
 		API_VERSION,
-		typeSerializer
+		typeSerializer,
+		config
 	)
 	{
 		this._wiqlProcessor = wiqlProcessor ?? throw new ArgumentNullException(nameof(wiqlProcessor));

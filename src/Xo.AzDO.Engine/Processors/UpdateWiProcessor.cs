@@ -8,11 +8,13 @@ public class UpdateWiProcessor : BaseHttpProcessor, IProcessor<UpdateWiCmd, Upda
     public UpdateWiProcessor(
         IHttpClientFactory httpClientFactory,
         ITypeSerializer typeSerializer,
-        IMapper<UpdateWiCmd, ExtWiReq> typeMapper
+        IMapper<UpdateWiCmd, ExtWiReq> typeMapper,
+        Config config
     ) : base(
                 httpClientFactory,
                 API_VERSION,
-                typeSerializer
+                typeSerializer,
+                config
     )
         => this._extReqMapper = typeMapper ?? throw new ArgumentNullException(nameof(typeMapper));
 

@@ -6,8 +6,9 @@ public class TeamProcessor : BaseHttpProcessor, IProcessor<GetTeamDetailsCmd, Te
 
     public TeamProcessor(
         IHttpClientFactory httpClientFactory,
-        ITypeSerializer typeSerializer
-    ) : base(httpClientFactory, API_VERSION, typeSerializer) { }
+        ITypeSerializer typeSerializer,
+        Config config
+    ) : base(httpClientFactory, API_VERSION, typeSerializer, config) { }
 
     public async Task<TeamRes> ProcessAsync(GetTeamDetailsCmd cmd)
     {

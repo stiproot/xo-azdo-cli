@@ -6,8 +6,9 @@ public class IterationsProcessor : BaseHttpProcessor, IProcessor<GetIterationsCm
 
     public IterationsProcessor(
         IHttpClientFactory httpClientFactory,
-        ITypeSerializer typeSerializer
-    ) : base(httpClientFactory, API_VERSION, typeSerializer) { }
+        ITypeSerializer typeSerializer,
+        Config config
+    ) : base(httpClientFactory, API_VERSION, typeSerializer, config) { }
 
     public async Task<IterationsRes> ProcessAsync(GetIterationsCmd cmd)
     {

@@ -6,11 +6,13 @@ public class GetQueryProcessor : BaseHttpProcessor, IProcessor<GetQueryCmd, GetQ
 
     public GetQueryProcessor(
         IHttpClientFactory httpClientFactory,
-        ITypeSerializer typeSerializer
+        ITypeSerializer typeSerializer,
+        Config config
     ) : base(
         httpClientFactory,
         API_VERSION,
-        typeSerializer
+        typeSerializer,
+        config
     ) { }
 
     public async Task<GetQueryRes> ProcessAsync(GetQueryCmd cmd)

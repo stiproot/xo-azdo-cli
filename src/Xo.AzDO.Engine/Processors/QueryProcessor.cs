@@ -10,11 +10,13 @@ public class QueryProcessor : BaseHttpProcessor, IProcessor<QueryCmd, QueryRes>
         IHttpClientFactory httpClientFactory,
         ITypeSerializer typeSerializer,
         IProcessor<BuildWiqlCmd, WiqlRes> wiqlProcessor,
-        IProcessor<GetQueryCmd, GetQueryRes> getQueryProcessor
+        IProcessor<GetQueryCmd, GetQueryRes> getQueryProcessor,
+        Config config
     ) : base(
         httpClientFactory,
         API_VERSION,
-        typeSerializer
+        typeSerializer,
+        config
     )
     {
         this._wiqlProcessor = wiqlProcessor ?? throw new ArgumentNullException(nameof(wiqlProcessor));

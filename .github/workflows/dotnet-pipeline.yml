@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup .NET7
+      - name: Setup .NET8
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: "8.0.303"
